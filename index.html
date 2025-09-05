@@ -1,93 +1,111 @@
 <!--
-.btn { display: inline-block; margin: .5rem 0; padding: .5rem 1rem; border-radius: .375rem; text-decoration: none; }
-.btn-primary { background: #2563eb; color: white; }
-.btn-primary:hover { background: #1d4ed8; }
-.btn-outline { border: 1px solid #d1d5db; color: #374151; }
-.btn-outline:hover { background: #f3f4f6; }
-.projects, .skills { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; }
-.card { background: white; padding: 1rem; border-radius: .5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
-footer { text-align: center; padding: 2rem; font-size: .875rem; color: #6b7280; }
-</style>
+Engineering Portfolio - Simple HTML/CSS Version
+
+Instructions:
+1. Save this file as `index.html` in your GitHub repo.
+2. Add your resume PDF and any images to a folder named `assets/` at the repo root.
+3. Push to GitHub. If your repo is `username.github.io`, this will automatically be live.
+
+You can edit text, projects, and links by replacing placeholders below.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nate Karau - Engineering Portfolio</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; background: #f9fafb; color: #1f2937; }
+    header { background: white; padding: 1rem 2rem; box-shadow: 0 1px 3px rgba(0,0,0,0.1); position: sticky; top: 0; }
+    nav a { margin: 0 1rem; text-decoration: none; color: #374151; font-weight: 500; }
+    nav a:hover { text-decoration: underline; }
+    .container { max-width: 1000px; margin: auto; padding: 2rem; }
+    h1, h2, h3 { color: #111827; }
+    .btn { display: inline-block; margin: .5rem 0; padding: .5rem 1rem; border-radius: .375rem; text-decoration: none; }
+    .btn-primary { background: #2563eb; color: white; }
+    .btn-primary:hover { background: #1d4ed8; }
+    .btn-outline { border: 1px solid #d1d5db; color: #374151; }
+    .btn-outline:hover { background: #f3f4f6; }
+    .projects, .skills { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; }
+    .card { background: white; padding: 1rem; border-radius: .5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+    footer { text-align: center; padding: 2rem; font-size: .875rem; color: #6b7280; }
+  </style>
 </head>
 <body>
-<header>
-<div class="container" style="display:flex;justify-content:space-between;align-items:center;">
-<div>
-<h1 style="margin:0;font-size:1.25rem;">Nate Karau</h1>
-<p style="margin:0;font-size:.875rem;color:#6b7280;">Manufacturing & Design Engineer</p>
-</div>
-<nav>
-<a href="#projects">Projects</a>
-<a href="#skills">Skills</a>
-<a href="#contact">Contact</a>
-<a class="btn btn-outline" href="assets/Nate_Karau_Resume.pdf" target="_blank">Resume</a>
-</nav>
-</div>
-</header>
+  <header>
+    <div class="container" style="display:flex;justify-content:space-between;align-items:center;">
+      <div>
+        <h1 style="margin:0;font-size:1.25rem;">Nate Karau</h1>
+        <p style="margin:0;font-size:.875rem;color:#6b7280;">Manufacturing & Design Engineer</p>
+      </div>
+      <nav>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+        <a class="btn btn-outline" href="assets/Nate_Karau_Resume.pdf" target="_blank">Resume</a>
+      </nav>
+    </div>
+  </header>
 
+  <main class="container">
+    <section>
+      <h2>About Me</h2>
+      <p>I design and build engineering solutions for manufacturing, aerospace, and defense. My focus is on turning concepts into manufacturable products using tools like SolidWorks, Inventor, and AutoCAD.</p>
+      <a href="assets/Nate_Karau_Resume.pdf" target="_blank" class="btn btn-primary">Download Resume</a>
+    </section>
 
-<main class="container">
-<section>
-<h2>About Me</h2>
-<p>I design and build engineering solutions for manufacturing, aerospace, and defense. My focus is on turning concepts into manufacturable products using tools like SolidWorks, Inventor, and AutoCAD.</p>
-<a href="assets/Nate_Karau_Resume.pdf" target="_blank" class="btn btn-primary">Download Resume</a>
-</section>
+    <section id="projects" style="margin-top:3rem;">
+      <h2>Projects</h2>
+      <div class="projects">
+        <div class="card">
+          <h3>Tilt Table Prototype</h3>
+          <p>Led a two-semester project to design and manufacture a tilt table prototype. Managed team responsibilities in design, manufacturability, analysis, and reporting.</p>
+        </div>
+        <div class="card">
+          <h3>Satellite Mount Design</h3>
+          <p>Created a structural mounting bracket for a small satellite. Conducted analysis, prepared production drawings, and ensured manufacturability.</p>
+        </div>
+      </div>
+    </section>
 
+    <section id="skills" style="margin-top:3rem;">
+      <h2>Skills</h2>
+      <div class="skills">
+        <div class="card">
+          <h3>Design & CAD</h3>
+          <p>SolidWorks, Inventor, AutoCAD, Sheet Metal, Assemblies</p>
+        </div>
+        <div class="card">
+          <h3>Manufacturing</h3>
+          <p>GD&T, Machining, Fabrication, Weld Fixtures, BOMs & Drawings</p>
+        </div>
+        <div class="card">
+          <h3>Analysis</h3>
+          <p>FEA basics, Loading Cases, Factor of Safety, Materials</p>
+        </div>
+        <div class="card">
+          <h3>Software</h3>
+          <p>MATLAB, Excel, Basic Python, Git/GitHub</p>
+        </div>
+      </div>
+    </section>
 
-<section id="projects" style="margin-top:3rem;">
-<h2>Projects</h2>
-<div class="projects">
-<div class="card">
-<h3>Tilt Table Prototype</h3>
-<p>Led a two-semester project to design and manufacture a tilt table prototype. Managed team responsibilities in design, manufacturability, analysis, and reporting.</p>
-</div>
-<div class="card">
-<h3>Satellite Mount Design</h3>
-<p>Created a structural mounting bracket for a small satellite. Conducted analysis, prepared production drawings, and ensured manufacturability.</p>
-</div>
-</div>
-</section>
+    <section id="contact" style="margin-top:3rem;">
+      <h2>Contact</h2>
+      <p>If you'd like to get in touch, email me or connect on LinkedIn/GitHub:</p>
+      <p>
+        <a href="mailto:youremail@example.com" class="btn btn-primary">Email Me</a>
+      </p>
+      <p>
+        <a href="https://github.com/yourusername" target="_blank">GitHub</a> |
+        <a href="https://www.linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
+      </p>
+    </section>
+  </main>
 
-
-<section id="skills" style="margin-top:3rem;">
-<h2>Skills</h2>
-<div class="skills">
-<div class="card">
-<h3>Design & CAD</h3>
-<p>SolidWorks, Inventor, AutoCAD, Sheet Metal, Assemblies</p>
-</div>
-<div class="card">
-<h3>Manufacturing</h3>
-<p>GD&T, Machining, Fabrication, Weld Fixtures, BOMs & Drawings</p>
-</div>
-<div class="card">
-<h3>Analysis</h3>
-<p>FEA basics, Loading Cases, Factor of Safety, Materials</p>
-</div>
-<div class="card">
-<h3>Software</h3>
-<p>MATLAB, Excel, Basic Python, Git/GitHub</p>
-</div>
-</div>
-</section>
-
-
-<section id="contact" style="margin-top:3rem;">
-<h2>Contact</h2>
-<p>If you'd like to get in touch, email me or connect on LinkedIn/GitHub:</p>
-<p>
-<a href="mailto:youremail@example.com" class="btn btn-primary">Email Me</a>
-</p>
-<p>
-<a href="https://github.com/yourusername" target="_blank">GitHub</a> |
-<a href="https://www.linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
-</p>
-</section>
-</main>
-
-
-<footer>
-<p>© 2025 Nate Karau. All rights reserved.</p>
-</footer>
+  <footer>
+    <p>© 2025 Nate Karau. All rights reserved.</p>
+  </footer>
 </body>
 </html>
