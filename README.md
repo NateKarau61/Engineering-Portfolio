@@ -6,7 +6,7 @@ It highlights my background in **manufacturing and design engineering**, selecte
 ---
 
 ## 🌐 Live Website
-👉 [https://username.github.io](https://github.com/NateKarau61) 
+👉 [(https://github.com/NateKarau61)](https://github.com/NateKarau61) 
 
 ---
 
