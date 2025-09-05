@@ -4,15 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nathaniel Karau Portfolio</title>
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
     <nav>
       <ul>
         <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
         <li><a href="#projects">Projects</a></li>
-        <li><a href="#skills">Skills</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
@@ -20,39 +20,34 @@
 
   <main>
     <!-- Home Section -->
-    <section id="home" class="section home-section">
-      <h1>Welcome to My Portfolio</h1>
-      <p>Hi, I'm Nathaniel. I love engineering and design.</p>
+    <section id="home" class="section home">
+      <h1>Hi, I'm Nathaniel Karau</h1>
+      <p>Engineer | Designer | Innovator</p>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about">
+      <h2>About Me</h2>
+      <p>I'm passionate about engineering and design, constantly seeking innovative solutions to complex problems.</p>
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="section projects-section">
-      <h2>My Projects</h2>
-      <div class="projects-grid">
+    <section id="projects" class="section projects">
+      <h2>Projects</h2>
+      <div class="project-list">
         <div class="project-card">Project 1</div>
         <div class="project-card">Project 2</div>
         <div class="project-card">Project 3</div>
       </div>
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="section skills-section">
-      <h2>Skills</h2>
-      <div class="skills-grid">
-        <div class="skill-card">SolidWorks</div>
-        <div class="skill-card">AutoCAD</div>
-        <div class="skill-card">Inventor</div>
-        <div class="skill-card">Python</div>
-      </div>
-    </section>
-
     <!-- Contact Section -->
-    <section id="contact" class="section contact-section">
+    <section id="contact" class="section contact">
       <h2>Contact Me</h2>
       <form>
         <input type="text" placeholder="Your Name" required>
         <input type="email" placeholder="Your Email" required>
-        <textarea placeholder="Message" required></textarea>
+        <textarea placeholder="Your Message" required></textarea>
         <button type="submit">Send</button>
       </form>
     </section>
