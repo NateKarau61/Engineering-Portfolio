@@ -1,0 +1,95 @@
+/* styles.css */
+body { 
+  font-family: Arial, sans-serif; 
+  margin: 0; 
+  background: #f9fafb; 
+  color: #1f2937; 
+}
+header { 
+  background: white; 
+  padding: 1rem 2rem; 
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1); 
+  position: sticky; 
+  top: 0; 
+}
+nav a { 
+  margin: 0 1rem; 
+  text-decoration: none; 
+  color: #374151; 
+  font-weight: 500; 
+}
+nav a:hover { 
+  text-decoration: underline; 
+}
+.container { 
+  max-width: 1000px; 
+  margin: auto; 
+  padding: 2rem; 
+}
+h1, h2, h3 { 
+  color: #111827; 
+}
+.btn { 
+  display: inline-block; 
+  margin: .5rem 0; 
+  padding: .5rem 1rem; 
+  border-radius: .375rem; 
+  text-decoration: none; 
+}
+.btn-primary { 
+  background: #2563eb; 
+  color: white; 
+}
+.btn-primary:hover { 
+  background: #1d4ed8; 
+}
+.btn-outline { 
+  border: 1px solid #d1d5db; 
+  color: #374151; 
+}
+.btn-outline:hover { 
+  background: #f3f4f6; 
+}
+.projects, .skills { 
+  display: grid; 
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+  gap: 1rem; 
+}
+.card { 
+  background: white; 
+  padding: 1rem; 
+  border-radius: .5rem; 
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1); 
+  border: 1px solid #ccc;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+.card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 10px;
+  margin-right: 10px;
+  background-color: #FF0000;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+.button:hover {
+  background-color: #cc0000;
+}
+footer {
+  text-align: center;
+  padding: 2rem;
+  font-size: .875rem;
+  color: #6b7280;
+}
