@@ -18,6 +18,7 @@ Check out my portfolio online:
 <p>│ ├── project1.jpg # Example project image</p>
 <p>│ └── project2.jpg # Example project image</p>
 <p>└── README.md # This file</p>
+
 ---
 
 ## 🚀 Features
