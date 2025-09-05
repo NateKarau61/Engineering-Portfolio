@@ -1,172 +1,93 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Manufacturing Engineering Portfolio — Nate Karau</title>
-  <meta name="description" content="Manufacturing engineer portfolio — case studies, CAD, process improvements, and contact." />
-  <link rel="stylesheet" href="styles.css" />
+<!--
+.btn { display: inline-block; margin: .5rem 0; padding: .5rem 1rem; border-radius: .375rem; text-decoration: none; }
+.btn-primary { background: #2563eb; color: white; }
+.btn-primary:hover { background: #1d4ed8; }
+.btn-outline { border: 1px solid #d1d5db; color: #374151; }
+.btn-outline:hover { background: #f3f4f6; }
+.projects, .skills { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; }
+.card { background: white; padding: 1rem; border-radius: .5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+footer { text-align: center; padding: 2rem; font-size: .875rem; color: #6b7280; }
+</style>
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-grid">
-      <h1 class="brand">Nate Karau</h1>
-      <nav class="nav">
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Case Studies</a>
-        <a href="#experience">Experience</a>
-        <a href="#contact">Contact</a>
-        <a class="cta" href="https://github.com/NateKarau61/Engineering-Portfolio/blob/main/assets/Nathaniel%20Karau%20-%20Resume.pdf" download>Resume</a>
-      </nav>
-    </div>
-  </header>
+<header>
+<div class="container" style="display:flex;justify-content:space-between;align-items:center;">
+<div>
+<h1 style="margin:0;font-size:1.25rem;">Nate Karau</h1>
+<p style="margin:0;font-size:.875rem;color:#6b7280;">Manufacturing & Design Engineer</p>
+</div>
+<nav>
+<a href="#projects">Projects</a>
+<a href="#skills">Skills</a>
+<a href="#contact">Contact</a>
+<a class="btn btn-outline" href="assets/Nate_Karau_Resume.pdf" target="_blank">Resume</a>
+</nav>
+</div>
+</header>
 
-  <main>
-    <!-- Hero -->
-    <section id="hero" class="hero container">
-      <div class="hero-left">
-        <h2>Manufacturing & Product Design Engineer</h2>
-        <p class="lead">I design manufacturing processes and fixtures, optimize production lines, and build CAD-driven solutions that reduce cost and cycle time. Comfortable with SolidWorks, Inventor, AutoCAD, GD&T, and shop practices.</p>
-        <div class="hero-cta">
-          <a class="btn" href="#projects">See Case Studies</a>
-          <a class="btn ghost" href="resume.pdf" download>Download Resume</a>
-        </div>
-      </div>
-      <div class="hero-right">
-        <!-- Placeholder for headshot or CAD thumbnail -->
-        <div class="card card-visual">
-          <div class="visual-placeholder">CAD / Photo</div>
-          <p class="visual-caption">Tilt-table prototype • Team lead • SolidWorks</p>
-        </div>
-      </div>
-    </section>
 
-    <!-- About -->
-    <section id="about" class="container section">
-      <h3>About</h3>
-      <p>I’m a manufacturing engineer with experience in fixture design, process documentation, DFMEA, tolerance stackups, and line balancing. I focus on practical solutions that scale to production and make life easier for assembly teams and operators.</p>
-      <ul class="meta-list">
-        <li><strong>Location:</strong> Redondo Beach, CA (example)</li>
-        <li><strong>Role target:</strong> Manufacturing / Process / Design Engineer — space & defense, aerospace, or industrial automation</li>
-      </ul>
-    </section>
+<main class="container">
+<section>
+<h2>About Me</h2>
+<p>I design and build engineering solutions for manufacturing, aerospace, and defense. My focus is on turning concepts into manufacturable products using tools like SolidWorks, Inventor, and AutoCAD.</p>
+<a href="assets/Nate_Karau_Resume.pdf" target="_blank" class="btn btn-primary">Download Resume</a>
+</section>
 
-    <!-- Skills -->
-    <section id="skills" class="container section">
-      <h3>Skills & Tools</h3>
-      <div class="chips-grid">
-        <span class="chip">SolidWorks — Advanced</span>
-        <span class="chip">Autodesk Inventor</span>
-        <span class="chip">AutoCAD</span>
-        <span class="chip">GD&T</span>
-        <span class="chip">Tolerance stackup</span>
-        <span class="chip">PFMEA / Control Plans</span>
-        <span class="chip">Lean / 5S</span>
-        <span class="chip">Fixture & jig design</span>
-        <span class="chip">Manufacturing BOM</span>
-        <span class="chip">MATLAB / Excel / VBA</span>
-      </div>
-    </section>
 
-    <!-- Case Studies -->
-    <section id="projects" class="container section">
-      <h3>Selected Case Studies</h3>
-      <div class="grid">
-        <!-- Card 1 -->
-        <article class="card">
-          <h4>Tilt-Table Prototype — Fixture & Test System</h4>
-          <p class="muted">Team lead • SolidWorks • Machining & weld fixtures</p>
-          <p>Led design and build of a tilt table prototype for subsystem testing. Divided team roles across design, manufacturing, analysis, and documentation. Result: functional prototype delivered on schedule; recommended DFMA changes that reduced parts count by 12%.</p>
-          <p class="card-foot">
-            <strong>Impact:</strong> Reduced assembly time 18% • Saved estimated $6k/yr in parts cost.
-          </p>
-          <div class="card-actions">
-            <a href="projects/tilt-table-case-study.md" class="link">Read full case study</a>
-            <a href="#contact" class="link">Discuss this project</a>
-          </div>
-        </article>
+<section id="projects" style="margin-top:3rem;">
+<h2>Projects</h2>
+<div class="projects">
+<div class="card">
+<h3>Tilt Table Prototype</h3>
+<p>Led a two-semester project to design and manufacture a tilt table prototype. Managed team responsibilities in design, manufacturability, analysis, and reporting.</p>
+</div>
+<div class="card">
+<h3>Satellite Mount Design</h3>
+<p>Created a structural mounting bracket for a small satellite. Conducted analysis, prepared production drawings, and ensured manufacturability.</p>
+</div>
+</div>
+</section>
 
-        <!-- Card 2 -->
-        <article class="card">
-          <h4>Line Optimization — Cycle Time Reduction</h4>
-          <p class="muted">Process mapping • Value stream • Kaizen</p>
-          <p>Performed time studies and balanced operator work content on a 6-station line. Implemented simple poka-yoke fixtures and re-sequenced tasks to reduce bottlenecks.</p>
-          <p class="card-foot"><strong>Impact:</strong> Cycle time down 23%, throughput up 30%.</p>
-          <div class="card-actions">
-            <a href="projects/line-optimization.md" class="link">Read full case study</a>
-          </div>
-        </article>
 
-        <!-- Add more cards as necessary -->
-      </div>
-    </section>
+<section id="skills" style="margin-top:3rem;">
+<h2>Skills</h2>
+<div class="skills">
+<div class="card">
+<h3>Design & CAD</h3>
+<p>SolidWorks, Inventor, AutoCAD, Sheet Metal, Assemblies</p>
+</div>
+<div class="card">
+<h3>Manufacturing</h3>
+<p>GD&T, Machining, Fabrication, Weld Fixtures, BOMs & Drawings</p>
+</div>
+<div class="card">
+<h3>Analysis</h3>
+<p>FEA basics, Loading Cases, Factor of Safety, Materials</p>
+</div>
+<div class="card">
+<h3>Software</h3>
+<p>MATLAB, Excel, Basic Python, Git/GitHub</p>
+</div>
+</div>
+</section>
 
-    <!-- Experience -->
-    <section id="experience" class="container section">
-      <h3>Experience</h3>
-      <ol class="timeline">
-        <li>
-          <div class="tl-left">
-            <strong>Manufacturing Engineer — Midwest Manufacturer</strong>
-            <p class="muted">2023 — Present</p>
-          </div>
-          <div class="tl-right">
-            Designed fixtures, reduced scrap, and supported production ramp for a 12,000 units/year product line.
-          </div>
-        </li>
-        <li>
-          <div class="tl-left">
-            <strong>Engineering Intern — Viracon (example)</strong>
-            <p class="muted">2021 — 2022</p>
-          </div>
-          <div class="tl-right">
-            Supported structural test rigs and CAD model release process. Wrote assembly instructions and BOMs for production.
-          </div>
-        </li>
-      </ol>
-    </section>
 
-    <!-- Contact -->
-    <section id="contact" class="container section">
-      <h3>Contact</h3>
-      <p>If you'd like to collaborate or discuss a role, email me at <a href="mailto:you@example.com">you@example.com</a> or connect on <a href="https://www.linkedin.com" target="_blank" rel="noopener">LinkedIn</a>.</p>
+<section id="contact" style="margin-top:3rem;">
+<h2>Contact</h2>
+<p>If you'd like to get in touch, email me or connect on LinkedIn/GitHub:</p>
+<p>
+<a href="mailto:youremail@example.com" class="btn btn-primary">Email Me</a>
+</p>
+<p>
+<a href="https://github.com/yourusername" target="_blank">GitHub</a> |
+<a href="https://www.linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
+</p>
+</section>
+</main>
 
-      <form class="contact-form" onsubmit="return contactForm(event)">
-        <label>
-          <span>Name</span>
-          <input type="text" name="name" placeholder="Your name" required />
-        </label>
-        <label>
-          <span>Email</span>
-          <input type="email" name="email" placeholder="you@example.com" required />
-        </label>
-        <label>
-          <span>Message</span>
-          <textarea name="message" placeholder="Short message" rows="4" required></textarea>
-        </label>
-        <div>
-          <button class="btn" type="submit">Send</button>
-        </div>
-        <p class="muted small" id="contact-note">This form is client-side only — replace with a backend or Formspree webhook to receive messages.</p>
-      </form>
-    </section>
-  </main>
 
-  <footer class="site-footer">
-    <div class="container">
-      <p>© <span id="year"></span> Nate Karau — Manufacturing Engineering Portfolio</p>
-    </div>
-  </footer>
-
-  <script>
-    // small JS for year and placeholder contact
-    document.getElementById('year').textContent = new Date().getFullYear();
-    function contactForm(e) {
-      e.preventDefault();
-      alert('This demo form doesn\\'t send email. Replace with Formspree, Netlify Forms, or your backend.');
-      return false;
-    }
-  </script>
+<footer>
+<p>© 2025 Nate Karau. All rights reserved.</p>
+</footer>
 </body>
 </html>
