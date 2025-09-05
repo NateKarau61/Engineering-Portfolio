@@ -12,12 +12,12 @@ It highlights my background in **manufacturing and design engineering**, selecte
 
 ## 📂 Repository Structure
 .
-├── index.html # Main portfolio webpage
-├── assets/ # Supporting files
-│ ├── Nate_Karau_Resume.pdf # My resume (downloadable)
-│ ├── project1.jpg # Project image example
-│ └── project2.jpg # Project image example
-└── README.md # This file
+<p>├── index.html # Main portfolio webpage</p>
+<p>├── assets/ # Supporting files</p>
+<p>│ ├── Nate_Karau_Resume.pdf # My resume (downloadable)</p>
+<p>│ ├── project1.jpg # Project image example</p>
+<p>│ └── project2.jpg # Project image example</p>
+<p>└── README.md # This file</p>
 ---
 
 ## 🚀 How to Use
