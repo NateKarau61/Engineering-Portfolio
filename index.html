@@ -44,6 +44,9 @@ You can edit text, projects, and links by replacing placeholders below.
     .card:hover {
   transform: translateY(-5px);       /* subtle hover effect */
   box-shadow: 0 4px 15px rgba(0,0,0,0.2);}
+    .button {display: inline-block; padding: 10px 20px; margin-top: 10px; margin-right: 10px; background-color: #FF0000;  /* bright red */ 
+            color: #fff; text-decoration: none; border-radius: 5px; font-weight: bold; transition: background 0.2s;}
+    .button:hover {background-color: #cc0000; /* slightly darker on hover */}
    </style>
 </head>
 <body>
@@ -78,12 +81,17 @@ You can edit text, projects, and links by replacing placeholders below.
 <section id="projects" style="margin-top:3rem;">
   <h2>Projects</h2>
   <div class="projects">
-    <a href="assets/Tilt_Table_Prototype.pdf" class="card-link">
-      <div class="card">
-        <h3>Tilt Table Prototype</h3>
-        <p style="margin:0;font-size:2rem;color:#FF0000;">CHANGE UP</p>
-        <p>Led a two-semester project to design and manufacture a tilt table prototype. Managed team responsibilities in design, manufacturability, analysis, and reporting.</p>
-      </div>
+    <div class="card">
+      <h3>Tilt Table Prototype</h3>
+      <p style="margin:0;font-size:2rem;color:#FF0000;">CHANGE UP</p>
+      <p>Led a two-semester project to design and manufacture a tilt table prototype. Managed team responsibilities in design, manufacturability, analysis, and reporting.</p>
+      
+      <!-- PDF link button -->
+      <a href="assets/Tilt_Table_Prototype.pdf" target="_blank" class="button">View PDF</a>
+
+      <!-- Video link button -->
+      <a href="https://drive.google.com/file/d/1ruOjz3LnGeyz0sJAufxGZzN2zHqYnK5R/view?usp=sharing" target="_blank" class="button">Watch Video</a>
+    </div>
     </a>
     <a href="satellite-mount.html" class="card-link">
       <div class="card">
