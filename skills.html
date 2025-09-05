@@ -1,149 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nathaniel Karau - Engineering Portfolio</title>
-  <style>
-    /* Global styles */
-    body { font-family: Arial, sans-serif; margin: 0; background: #f9fafb; color: #1f2937; line-height: 1.5; }
-    a { text-decoration: none; color: inherit; }
-    h1, h2, h3 { color: #111827; margin-bottom: 0.5rem; }
-
-    /* Header & nav */
-    header { background: white; padding: 1rem 2rem; box-shadow: 0 1px 3px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 10; }
-    nav a { margin: 0 1rem; font-weight: 500; }
-    nav a:hover { text-decoration: underline; }
-    .btn { display: inline-block; margin: 0.5rem 0; padding: 0.5rem 1rem; border-radius: 0.375rem; font-weight: bold; }
-    .btn-primary { background: #2563eb; color: white; }
-    .btn-primary:hover { background: #1d4ed8; }
-    .btn-outline { border: 1px solid #d1d5db; color: #374151; }
-    .btn-outline:hover { background: #f3f4f6; }
-    .button { display: inline-block; padding: 10px 20px; margin-top: 10px; margin-right: 10px; background-color: #FF0000; color: #fff; border-radius: 5px; transition: background 0.2s; }
-    .button:hover { background-color: #cc0000; }
-
-    /* Containers */
-    .container { max-width: 1000px; margin: auto; padding: 2rem; }
-
-    /* Sections */
-    section { margin-top: 3rem; }
-
-    /* Cards and grids */
-    .projects, .skills { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; }
-    .card { background: white; padding: 1rem; border-radius: 0.5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.1); transition: transform 0.2s, box-shadow 0.2s; }
-    .card:hover { transform: translateY(-5px); box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
-
-    footer { text-align: center; padding: 2rem; font-size: 0.875rem; color: #6b7280; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills - Nathaniel Karau</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Header -->
-  <header>
-    <div class="container" style="display:flex;justify-content:space-between;align-items:center;">
-      <div>
-        <h1 style="margin:0;font-size:1.25rem;">Nate Karau</h1>
-        <p style="margin:0;font-size:.875rem;color:#6b7280;">Manufacturing & Design Engineer</p>
-      </div>
-      <nav>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
-        <a class="btn btn-outline" href="assets/Nathaniel_Karau_Resume.pdf" target="_blank">Resume</a>
-      </nav>
-    </div>
-  </header>
+    <header>
+        <h1>🛠 Skills</h1>
+        <nav>
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="projects.html" class="nav-link">Projects</a>
+            <a href="skills.html" class="nav-link">Skills</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+        </nav>
+    </header>
 
-  <!-- Main content -->
-  <main class="container">
+    <main>
+        <section class="skills-grid">
+            <div class="skill-card">SolidWorks</div>
+            <div class="skill-card">AutoCAD</div>
+            <div class="skill-card">Inventor</div>
+            <div class="skill-card">Structural Design</div>
+            <div class="skill-card">Product Design</div>
+            <div class="skill-card">Project Management</div>
+        </section>
+    </main>
 
-    <!-- About Me -->
-    <section id="about">
-      <h2>About Me</h2>
-      <p style="margin:0;font-size:2rem;color:#FF0000;">CHANGE UP</p>
-      <p>I am a results-driven manufacturing design engineer with a passion for turning complex ideas into functional, manufacturable solutions. 
-        With expertise in SolidWorks, Inventor, and AutoCAD, I’ve designed components and systems for aerospace, defense, and high-performance manufacturing environments. 
-        My background spans the full product lifecycle — from concept modeling and FEA analysis in ANSYS to prototyping, testing, and production optimization. 
-        I thrive in fast-paced, multidisciplinary teams and take pride in delivering innovative designs that meet strict performance, cost, and safety requirements. 
-        Beyond engineering, I’m driven by continuous learning, problem-solving under pressure, and creating designs that make a real-world impact.</p>
-      <a href="assets/Nathaniel_Karau_Resume.pdf" target="_blank" class="btn btn-primary">Download Resume</a>
-    </section>
-
-    <!-- Projects -->
-    <section id="projects">
-      <h2>Projects</h2>
-      <div class="projects">
-
-        <!-- Tilt Table Prototype -->
-        <div class="card">
-          <h3>Tilt Table Prototype</h3>
-          <p style="margin:0;font-size:2rem;color:#FF0000;">CHANGE UP</p>
-          <p>Led a two-semester project to design and manufacture a tilt table prototype. Managed team responsibilities in design, manufacturability, analysis, and reporting.</p>
-          <a href="assets/Tilt_Table_Prototype.pdf" target="_blank" class="button">View PDF</a>
-          <a href="https://drive.google.com/file/d/1ruOjz3LnGeyz0sJAufxGZzN2zHqYnK5R/view?usp=sharing" target="_blank" class="button">Watch Video</a>
-        </div>
-
-        <!-- Satellite Mount Design -->
-        <a href="satellite-mount.html" class="card-link">
-          <div class="card">
-            <h3>Satellite Mount Design</h3>
-            <p style="margin:0;font-size:2rem;color:#FF0000;">CHANGE UP</p>
-            <p>Created a structural mounting bracket for a small satellite. Conducted analysis, prepared production drawings, and ensured manufacturability.</p>
-          </div>
-        </a>
-
-      </div>
-    </section>
-
-    <!-- Skills -->
-    <section id="skills">
-      <h2>Skills</h2>
-      <div class="skills">
-        <div class="card">
-          <h3>Design & Product Development</h3>
-          <p>CAD Modeling (SolidWorks, AutoCAD, Inventor), Design for Manufacturability (DFM), GD&T, Prototyping, CAM</p>
-        </div>
-        <div class="card">
-          <h3>Manufacturing Process & Methods</h3>
-          <p>Machining (CNC, Milling, Turning, Drilling, Griding), Welding, Casting, Injection Molding, Assembly Methods</p>
-        </div>
-        <div class="card">
-          <h3>Process Engineering</h3>
-          <p>Process optimization, Lean Manufacturing, Six Sigma, Failure Mode & Effects Analysis (FMEA), Process Flow Diagrams</p>
-        </div>
-        <div class="card">
-          <h3>Manufacturing Systems & Automation</h3>
-          <p>PLC Programming, Robotics & Automation Integration, CNC Programming (G-Code, CAM Software), Fixtures, Jigs, Tooling Design</p>
-        </div>
-        <div class="card">
-          <h3>Project & Business Skills</h3>
-          <p>Project Management, Cross-functional team collaboration, technical writing & Documentation</p>
-        </div>
-        <div class="card">
-          <h3>Data & Software Skills</h3>
-          <p>Data Analysis (Excel, Python), Simulation & Modeling, Microsoft Office, Git/Github</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>If you'd like to get in touch, email me or connect on LinkedIn/GitHub:</p>
-      <p>
-        <a href="nathaniel.karau@gmail.com" class="btn btn-primary">Email Me</a>
-      </p>
-      <p>
-        <a href="https://github.com/NateKarau61" target="_blank">GitHub</a> |
-        <a href="https://www.linkedin.com/in/nate-karau61/" target="_blank">LinkedIn</a>
-      </p>
-    </section>
-
-  </main>
-
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 Nate Karau. All rights reserved.</p>
-  </footer>
-
+    <footer>
+        <p>&copy; 2025 Nathaniel Karau</p>
+    </footer>
 </body>
 </html>
