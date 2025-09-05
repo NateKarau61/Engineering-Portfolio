@@ -1,29 +1,68 @@
-# Engineering Portfolio - Nate Karau
+# Nate Karau – Engineering Portfolio
 
-This repository hosts my personal engineering portfolio website, built with simple **HTML/CSS** and deployed using **GitHub Pages**.  
-It highlights my background in **manufacturing and design engineering**, selected projects, skills, and contact information.
+Welcome to my personal **Engineering Portfolio**! This repository hosts my professional portfolio website, showcasing my skills, experience, and projects in **manufacturing and design engineering**, with a focus on aerospace and defense applications.
 
 ---
 
 ## 🌐 Live Website
-👉 [https://natekarau61.github.io/Engineering-Portfolio/](https://github.com/NateKarau61) 
+Check out my portfolio online:  
+[https://username.github.io](https://username.github.io)  
+*(Replace `username` with your GitHub username, e.g., `natekarau.github.io`)*
 
 ---
 
 ## 📂 Repository Structure
-.
-<p>├── index.html # Main portfolio webpage</p>
-<p>├── assets/ # Supporting files</p>
-<p>│ ├── Nate_Karau_Resume.pdf # My resume (downloadable)</p>
-<p>│ ├── project1.jpg # Project image example</p>
-<p>│ └── project2.jpg # Project image example</p>
-<p>└── README.md # This file</p>
+├── index.html # Main portfolio webpage
+├── assets/ # Folder for supporting files
+│ ├── Nathaniel_Karau_Resume.pdf # Downloadable resume
+│ ├── project1.jpg # Example project image
+│ └── project2.jpg # Example project image
+└── README.md # This file
 ---
 
-## 🚀 How to Use
-1. Clone or download the repo:
-   ```bash
-   git clone https://github.com/username/username.github.io
-   ---
+## 🚀 Features
+- **Clean, modern, and responsive design** using HTML & CSS.  
+- **Projects section** to showcase selected engineering work.  
+- **Skills section** to highlight technical competencies.  
+- **Resume download link** for recruiters and employers.  
+- **Contact section** with email, GitHub, and LinkedIn links.  
+- Fully compatible with **GitHub Pages** — easy to deploy.  
 
-Would you like me to **fill in this README with your real info** (your actual GitHub username, LinkedIn, and email), so it’s already polished and ready to upload?
+---
+
+## 🛠️ Built With
+- HTML5  
+- CSS3  
+- GitHub Pages (hosting)
+
+---
+
+## 💼 Selected Projects
+
+### Tilt Table Prototype
+- Led a team for a two-semester prototype project.  
+- Responsibilities: CAD design, manufacturability analysis, team coordination, and reporting.  
+
+### Satellite Mount Design
+- Designed structural mounting brackets for small satellite systems.  
+- Included analysis, production drawings, and manufacturability review.  
+
+*(You can add or replace projects by editing `index.html`.)*
+
+---
+
+## 🛠️ Skills
+- **Design & CAD:** SolidWorks, Inventor, AutoCAD, Assemblies, Sheet Metal  
+- **Manufacturing:** GD&T, Machining, Fabrication, Weld Fixtures, BOM & Drawings  
+- **Analysis:** FEA basics, Loading Cases, Factor of Safety, Material Selection  
+- **Software:** MATLAB, Excel, Basic Python, Git/GitHub  
+
+---
+
+## 📬 Contact
+- **Name:** Nate Karau  
+- **Email:** [youremail@example.com](mailto:youremail@example.com)  
+- **GitHub:** [github.com/yourusername](https://github.com/yourusername)  
+- **LinkedIn:** [linkedin.com/in/yourprofile](https://linkedin.com/in/yourprofile)  
+
+Feel free to reach out for **collaboration, hiring inquiries, or project discussion**.
