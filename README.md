@@ -32,8 +32,7 @@ Check out my portfolio online:
 ---
 
 ## 🛠️ Built With
-- HTML5  
-- CSS3  
+- HTML5   
 - GitHub Pages (hosting)
 
 ---
@@ -44,26 +43,25 @@ Check out my portfolio online:
 - Led a team for a two-semester prototype project.  
 - Responsibilities: CAD design, manufacturability analysis, team coordination, and reporting.  
 
-### Satellite Mount Design
-- Designed structural mounting brackets for small satellite systems.  
-- Included analysis, production drawings, and manufacturability review.  
 
 *(You can add or replace projects by editing `index.html`.)*
 
 ---
 
 ## 🛠️ Skills
-- **Design & CAD:** SolidWorks, Inventor, AutoCAD, Assemblies, Sheet Metal  
-- **Manufacturing:** GD&T, Machining, Fabrication, Weld Fixtures, BOM & Drawings  
-- **Analysis:** FEA basics, Loading Cases, Factor of Safety, Material Selection  
-- **Software:** MATLAB, Excel, Basic Python, Git/GitHub  
+- **Design & Product Development:** CAD Modeling (SolidWorks, AutoCAD, Inventor), Design for Manufacturability (DFM), GD&T, Prototyping, CAM  
+- **Manufacturing Process & Methods:** Machining (CNC, Milling, Turning, Drilling, Griding), Welding, Casting, Injection Molding, Assembly Methods 
+- **Process Engineering:** Process optimization, Lean Manufacturing, Six Sigma, Failure Mode & Effects Analysis (FMEA), Process Flow Diagrams  
+- **Manufacturing Systems & Automation:** PLC Programming, Robotics & Automation Integration, CNC Programming (G-Code, CAM Software), Fixtures, Jigs, Tooling Design
+- **Project & Business Skills:** Project Management, Cross-functional team collaboration, technical writing & Documentation
+- **Data & Software Skills:** Data Analysis (Excel, Python), Simulation & Modeling, Microsoft Office, Git/Github
 
 ---
 
 ## 📬 Contact
-- **Name:** Nate Karau  
-- **Email:** [youremail@example.com](mailto:youremail@example.com)  
-- **GitHub:** [github.com/yourusername](https://github.com/yourusername)  
-- **LinkedIn:** [linkedin.com/in/yourprofile](https://linkedin.com/in/yourprofile)  
+- **Name:** Nathaniel Karau  
+- **Email:** [nathaniel.karau@gmail.com](nathaniel.karau@gmail.com)  
+- **GitHub:** [https://github.com/NateKarau61](https://github.com/NateKarau61)  
+- **LinkedIn:** [https://www.linkedin.com/in/nate-karau61/](https://www.linkedin.com/in/nate-karau61/)  
 
 Feel free to reach out for **collaboration, hiring inquiries, or project discussion**.
