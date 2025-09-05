@@ -6,8 +6,7 @@ It highlights my background in **manufacturing and design engineering**, selecte
 ---
 
 ## 🌐 Live Website
-👉 [https://username.github.io](https://username.github.io)  
-(Replace `username` with your GitHub username — e.g. `natekarau.github.io`.)
+👉 [https://username.github.io](https://github.com/NateKarau61) 
 
 ---
 
