@@ -4,25 +4,205 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nathaniel Karau Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      width: 100%;
+      height: 100%;
+      font-family: 'Arial', sans-serif;
+      scroll-behavior: smooth;
+      background-color: #1a1a1a; /* softer dark background */
+      color: #e0e0e0; /* softer text color */
+    }
+
+    /* Sidebar */
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 220px;
+      height: 100%;
+      background: #111; 
+      padding: 2rem 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .sidebar h2 {
+      color: white;
+      margin-bottom: 2rem;
+    }
+
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+      width: 100%;
+    }
+
+    .sidebar ul li {
+      margin: 1.5rem 0;
+      text-align: center;
+    }
+
+    .sidebar ul li a {
+      color: #e0e0e0;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.2rem;
+      transition: color 0.3s;
+    }
+
+    .sidebar ul li a:hover {
+      color: #ffcc00;
+    }
+
+    /* Main Content */
+    .content {
+      margin-left: 220px; /* space for sidebar */
+    }
+
+    /* Section */
+    .section {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 2rem;
+      background: #222; /* softer than before */
+      border-bottom: 1px solid #333;
+    }
+
+    /* Home */
+    .home {
+      background: #1e1e1e;
+    }
+
+    .home img {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      margin-top: 1rem;
+      border: 3px solid #444;
+      object-fit: cover;
+    }
+
+    /* About */
+    .about {
+      background: #2a2a2a;
+    }
+
+    /* Projects */
+    .projects {
+      background: #252525;
+    }
+
+    .projects h2 {
+      margin-bottom: 1rem;
+    }
+
+    .project-list {
+      display: flex;
+      gap: 2rem;
+      margin-top: 2rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .project-card {
+      background: #333;
+      color: #e0e0e0;
+      padding: 1rem;
+      border-radius: 10px;
+      width: 250px;
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .project-card img {
+      width: 100%;
+      height: 150px;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+      object-fit: cover;
+    }
+
+    /* Contact */
+    .contact {
+      background: #1f1f1f;
+    }
+
+    .contact form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      width: 300px;
+    }
+
+    .contact input,
+    .contact textarea {
+      padding: 0.8rem;
+      border: none;
+      border-radius: 5px;
+      background: #333;
+      color: #e0e0e0;
+    }
+
+    .contact button {
+      padding: 0.8rem;
+      border: none;
+      border-radius: 5px;
+      background: #555;
+      color: white;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .contact button:hover {
+      background: #777;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #111;
+      color: #aaa;
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+  <!-- Sidebar Navigation -->
+  <nav class="sidebar">
+    <h2>Portfolio</h2>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
-  <main>
+  <!-- Main Content -->
+  <div class="content">
     <!-- Home Section -->
     <section id="home" class="section home">
       <h1>Hi, I'm Nathaniel Karau</h1>
       <p>Engineer | Designer | Innovator</p>
+      <!-- Profile picture placeholder -->
+      <img src="Selfie.jpg" alt="Profile Picture">
     </section>
 
     <!-- About Section -->
@@ -35,9 +215,17 @@
     <section id="projects" class="section projects">
       <h2>Projects</h2>
       <div class="project-list">
-        <div class="project-card">Project 1</div>
-        <div class="project-card">Project 2</div>
-        <div class="project-card">Project 3</div>
+        <div class="project-card">
+          <img src="Cool_Picture.jpf" 1 Description</p>
+        </div>
+        <div class="project-card">
+          <img src="project2.jpg" alt="Project 2">
+          <p>Project 2 Description</p>
+        </div>
+        <div class="project-card">
+          <img src="project3.jpg" alt="Project 3">
+          <p>Project 3 Description</p>
+        </div>
       </div>
     </section>
 
@@ -51,22 +239,11 @@
         <button type="submit">Send</button>
       </form>
     </section>
-  </main>
 
-  <footer>
-    <p>© 2025 Nathaniel Karau</p>
-  </footer>
-
-  <script>
-    // Smooth scroll
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-          behavior: 'smooth'
-        });
-      });
-    });
-  </script>
+    <!-- Footer -->
+    <footer>
+      <p>© 2025 Nathaniel Karau</p>
+    </footer>
+  </div>
 </body>
 </html>
