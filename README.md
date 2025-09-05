@@ -6,7 +6,7 @@ Welcome to my personal **Engineering Portfolio**! This repository hosts my profe
 
 ## 🌐 Live Website
 Check out my portfolio online:  
-[https://username.github.io](https://username.github.io)  
+[https://natekarau61.github.io/Engineering-Portfolio/](https://natekarau61.github.io/Engineering-Portfolio/)  
 *(Replace `username` with your GitHub username, e.g., `natekarau.github.io`)*
 
 ---
