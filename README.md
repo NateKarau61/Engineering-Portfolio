@@ -1,4 +1,4 @@
-# Nathaniel Karau – Engineering Portfolio
+ Nathaniel Karau – Engineering Portfolio
 
 Welcome to my personal **Engineering Portfolio**! This repository hosts my professional portfolio website, showcasing my skills, experience, and projects in **manufacturing and design engineering**, with a focus on aerospace and defense applications.
 
