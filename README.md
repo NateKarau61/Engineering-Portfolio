@@ -14,11 +14,11 @@ Check out my portfolio online:
 
 ## 📂 Repository Structure
 <p>├── index.html # Main portfolio webpage</p>
-<p class="small-text">├── assets/ # Folder for supporting files</p>
-<p class="small-text">│ ├── Nathaniel_Karau_Resume.pdf # Downloadable resume</p>
-<p class="small-text">│ ├── project1.jpg # Example project image</p>
-<p class="small-text">│ └── project2.jpg # Example project image</p>
-<p class="small-text">└── README.md # This file</p>
+<p>├── assets/ # Folder for supporting files</p>
+<p>│ ├── Nathaniel_Karau_Resume.pdf # Downloadable resume</p>
+<p>│ ├── project1.jpg # Example project image</p>
+<p>│ └── project2.jpg # Example project image</p>
+<p>└── README.md # This file</p>
 ---
 
 ## 🚀 Features
