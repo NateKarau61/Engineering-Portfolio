@@ -11,11 +11,6 @@ Check out my portfolio online:
 
 ---
 
-<style>
-.small-text {
-  font-size: 12px; /* or 0.8rem */
-}
-</style>
 
 ## 📂 Repository Structure
 <p class="small-text">├── index.html # Main portfolio webpage</p>
