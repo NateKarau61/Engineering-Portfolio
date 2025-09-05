@@ -11,13 +11,19 @@ Check out my portfolio online:
 
 ---
 
+<style>
+.small-text {
+  font-size: 12px; /* or 0.8rem */
+}
+</style>
+
 ## 📂 Repository Structure
-├── index.html # Main portfolio webpage
+<p class="small-text">├── index.html # Main portfolio webpage
 ├── assets/ # Folder for supporting files
 │ ├── Nathaniel_Karau_Resume.pdf # Downloadable resume
 │ ├── project1.jpg # Example project image
 │ └── project2.jpg # Example project image
-└── README.md # This file
+└── README.md # This file</p>
 ---
 
 ## 🚀 Features
