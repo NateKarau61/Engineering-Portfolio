@@ -3,123 +3,108 @@
 // ------------------------
 $primary-color: #ff4081;
 $secondary-color: #1e1e2f;
-$background-gradient-start: #84fab0;
-$background-gradient-end: #8fd3f4;
+$bg-gradient-start: #84fab0;
+$bg-gradient-end: #8fd3f4;
 $text-color: #333;
 $font-stack: 'Arial', sans-serif;
 
 // ------------------------
-// GLOBAL STYLES
+// GLOBAL
 // ------------------------
-body {
-  font-family: $font-stack;
-  background: #f5f5f5;
-  color: $text-color;
-  line-height: 1.6;
+body, html {
   margin: 0;
   padding: 0;
+  font-family: $font-stack;
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
 }
 
 // ------------------------
-// HEADER & NAV
+// FULLPAGE SECTIONS
 // ------------------------
-header {
-  background: $secondary-color;
-  color: #fff;
+section {
+  width: 100%;
+  height: 100vh; // full screen
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  padding: 1rem 0;
-
-  nav {
-    margin-top: 0.5rem;
-
-    .nav-link {
-      color: #fff;
-      text-decoration: none;
-      margin: 0 1rem;
-      transition: color 0.3s;
-
-      &:hover {
-        color: $primary-color;
-      }
-    }
-  }
+  padding: 2rem;
 }
 
 // ------------------------
 // HERO SECTION
 // ------------------------
 .hero {
-  text-align: center;
-  padding: 5rem 1rem;
-  background: linear-gradient(120deg, $background-gradient-start, $background-gradient-end);
+  background: linear-gradient(135deg, $bg-gradient-start, $bg-gradient-end);
   color: #fff;
 
+  h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+  }
+
   .cta-button {
-    display: inline-block;
-    margin-top: 1rem;
-    padding: 0.75rem 2rem;
     background: $primary-color;
+    padding: 1rem 2rem;
     color: #fff;
     border-radius: 50px;
     text-decoration: none;
-    transition: transform 0.3s;
+    font-weight: bold;
+    transition: transform 0.3s, box-shadow 0.3s;
 
     &:hover {
       transform: scale(1.1);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
     }
-  }
-
-  .fade-in {
-    animation: fadeIn 2s ease-in;
-  }
-
-  .slide-in {
-    animation: slideIn 1.5s ease-out;
-  }
-
-  .slide-in-delay {
-    animation: slideIn 1.5s ease-out 0.5s forwards;
-    opacity: 0;
   }
 }
 
 // ------------------------
-// PROJECTS & SKILLS GRID
+// PROJECTS & SKILLS
 // ------------------------
 .projects-grid, .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
-  padding: 2rem;
+  width: 80%;
 
   .project-card, .skill-card {
     background: #fff;
-    padding: 1.5rem;
     border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    padding: 2rem;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
     transition: transform 0.3s, box-shadow 0.3s;
-    text-align: center;
 
     &:hover {
       transform: translateY(-10px);
-      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.25);
     }
   }
 }
 
 // ------------------------
-// CONTACT SECTION
+// CONTACT
 // ------------------------
 .contact-section {
-  text-align: center;
-  padding: 3rem 1rem;
+  background: $secondary-color;
+  color: #fff;
 
   ul {
     list-style: none;
     padding: 0;
 
     li {
-      margin: 0.5rem 0;
+      margin: 1rem 0;
 
       a {
         color: $primary-color;
@@ -134,6 +119,35 @@ header {
 }
 
 // ------------------------
+// HEADER
+// ------------------------
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba($secondary-color, 0.9);
+  padding: 1rem 0;
+  z-index: 1000;
+
+  nav {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+
+    .nav-link {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+
+      &:hover {
+        color: $primary-color;
+      }
+    }
+  }
+}
+
+// ------------------------
 // FOOTER
 // ------------------------
 footer {
@@ -141,7 +155,6 @@ footer {
   color: #fff;
   text-align: center;
   padding: 1rem 0;
-  margin-top: 2rem;
 }
 
 // ------------------------
@@ -152,7 +165,6 @@ footer {
   to { opacity: 1; transform: translateY(0); }
 }
 
-@keyframes slideIn {
-  from { opacity: 0; transform: translateX(-50px); }
-  to { opacity: 1; transform: translateX(0); }
+.fade-in {
+  animation: fadeIn 2s ease-in;
 }
