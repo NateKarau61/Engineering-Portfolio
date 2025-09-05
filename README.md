@@ -32,7 +32,8 @@ Check out my portfolio online:
 ---
 
 ## 🛠️ Built With
-- HTML5   
+- HTML5
+- CSS3
 - GitHub Pages (hosting)
 
 ---
