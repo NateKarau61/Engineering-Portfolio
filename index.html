@@ -30,7 +30,21 @@ You can edit text, projects, and links by replacing placeholders below.
     .projects, .skills { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; }
     .card { background: white; padding: 1rem; border-radius: .5rem; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
     footer { text-align: center; padding: 2rem; font-size: .875rem; color: #6b7280; }
-  </style>
+    .card-link {
+  text-decoration: none; /* remove underline */
+  color: inherit;       /* keep text color */
+  display: block;       /* make whole card clickable */}
+    .card {
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  background: #fff;
+  transition: transform 0.2s, box-shadow 0.2s;}
+    .card:hover {
+  transform: translateY(-5px);       /* subtle hover effect */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);}
+   </style>
 </head>
 <body>
   <header>
@@ -51,6 +65,8 @@ You can edit text, projects, and links by replacing placeholders below.
   <main class="container">
     <section>
       <h2>About Me</h2>
+      <!--  Change the about me up and make it myself-->
+      <p style="margin:0;font-size:2rem;color:#FF0000;">CHANGE UP</p>
       <p>I am a results-driven manufacturing design engineer with a passion for turning complex ideas into functional, 
         manufacturable solutions. With expertise in SolidWorks, Inventor, and AutoCAD, I’ve designed components and systems for aerospace, defense, and 
         high-performance manufacturing environments. My background spans the full product lifecycle — from concept modeling and FEA analysis in ANSYS to prototyping, testing, 
@@ -59,19 +75,25 @@ You can edit text, projects, and links by replacing placeholders below.
       <a href="assets/Nathaniel_Karau_Resume.pdf" target="_blank" class="btn btn-primary">Download Resume</a>
     </section>
 
-    <section id="projects" style="margin-top:3rem;">
-      <h2>Projects</h2>
-      <div class="projects">
-        <div class="card">
-          <h3>Tilt Table Prototype</h3>
-          <p>Led a two-semester project to design and manufacture a tilt table prototype. Managed team responsibilities in design, manufacturability, analysis, and reporting.</p>
-        </div>
-        <div class="card">
-          <h3>Satellite Mount Design</h3>
-          <p>Created a structural mounting bracket for a small satellite. Conducted analysis, prepared production drawings, and ensured manufacturability.</p>
-        </div>
+<section id="projects" style="margin-top:3rem;">
+  <h2>Projects</h2>
+  <div class="projects">
+    <a href="tilt-table-project.html" class="card-link">
+      <div class="card">
+        <h3>Tilt Table Prototype</h3>
+        <p style="margin:0;font-size:2rem;color:#FF0000;">CHANGE UP</p>
+        <p>Led a two-semester project to design and manufacture a tilt table prototype. Managed team responsibilities in design, manufacturability, analysis, and reporting.</p>
       </div>
-    </section>
+    </a>
+    <a href="satellite-mount.html" class="card-link">
+      <div class="card">
+        <h3>Satellite Mount Design</h3>
+        <p style="margin:0;font-size:2rem;color:#FF0000;">CHANGE UP</p>
+        <p>Created a structural mounting bracket for a small satellite. Conducted analysis, prepared production drawings, and ensured manufacturability.</p>
+      </div>
+    </a>
+  </div>
+</section>
 
     <section id="skills" style="margin-top:3rem;">
       <h2>Skills</h2>
