@@ -21,6 +21,11 @@
       color: #e0e0e0;
     }
 
+    /* Accent color */
+    :root {
+      --accent: #00aaff; /* bright blue */
+    }
+
     /* Sidebar */
     .sidebar {
       position: fixed;
@@ -60,12 +65,23 @@
     }
 
     .sidebar ul li a:hover {
-      color: #ffcc00;
+      color: var(--accent);
     }
 
     /* Main Content */
     .content {
       margin-left: 220px; /* space for sidebar */
+    }
+
+    /* Fade-in animation */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .fade-in {
+      opacity: 0;
+      animation: fadeIn 1.5s ease forwards;
     }
 
     /* Sections */
@@ -95,6 +111,13 @@
       object-fit: cover;
     }
 
+    .mission {
+      margin-top: 0.8rem;
+      font-size: 1.1rem;
+      color: #bbb;
+      max-width: 600px;
+    }
+
     /* Buttons below profile */
     .home .button-group {
       margin-top: 1.5rem;
@@ -106,21 +129,79 @@
       padding: 0.8rem 1.5rem;
       border: none;
       border-radius: 8px;
-      background: #444;
+      background: var(--accent);
       color: white;
       text-decoration: none;
       font-weight: bold;
-      transition: background 0.3s;
+      transition: transform 0.3s, background 0.3s;
     }
 
     .home .button-group a:hover {
-      background: #ffcc00;
-      color: black;
+      background: #0088cc;
+      transform: translateY(-3px);
     }
 
     /* About */
     .about {
       background: #2a2a2a;
+    }
+
+    /* Skills */
+    .skills {
+      background: #202020;
+    }
+
+    .skills h2 {
+      margin-bottom: 1rem;
+    }
+
+    .skills-list {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 1rem;
+    }
+
+    .skill {
+      background: #333;
+      padding: 1rem 2rem;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: transform 0.3s;
+    }
+
+    .skill:hover {
+      background: var(--accent);
+      color: #fff;
+      transform: translateY(-5px);
+    }
+
+    /* Timeline */
+    .timeline {
+      background: #2a2a2a;
+    }
+
+    .timeline h2 {
+      margin-bottom: 1.5rem;
+    }
+
+    .timeline ul {
+      list-style: none;
+      padding: 0;
+      max-width: 600px;
+      text-align: left;
+    }
+
+    .timeline li {
+      margin-bottom: 1.5rem;
+      border-left: 3px solid var(--accent);
+      padding-left: 1rem;
+    }
+
+    .timeline li h3 {
+      color: var(--accent);
+      margin-bottom: 0.2rem;
     }
 
     /* Projects */
@@ -147,11 +228,14 @@
       border-radius: 10px;
       width: 250px;
       box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
-      transition: transform 0.3s;
+      transition: transform 0.3s, box-shadow 0.3s;
+      text-decoration: none;
+      color: inherit;
     }
 
     .project-card:hover {
       transform: translateY(-10px);
+      box-shadow: 0 12px 20px rgba(0, 0, 0, 0.5);
     }
 
     .project-card img {
@@ -187,14 +271,15 @@
       padding: 0.8rem;
       border: none;
       border-radius: 5px;
-      background: #555;
+      background: var(--accent);
       color: white;
       cursor: pointer;
-      transition: background 0.3s;
+      transition: transform 0.3s, background 0.3s;
     }
 
     .contact button:hover {
-      background: #777;
+      background: #0088cc;
+      transform: translateY(-2px);
     }
 
     /* Footer */
@@ -213,6 +298,8 @@
     <ul>
       <li><a href="#home">Home</a></li>
       <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#timeline">Timeline</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="assets/Nathaniel_Karau_Resume.pdf" target="_blank">Resume</a></li>
       <li><a href="#contact">Contact</a></li>
@@ -223,15 +310,15 @@
   <div class="content">
     <!-- Home Section -->
     <section id="home" class="section home">
-      <h1>Hi, I'm Nathaniel Karau</h1>
-      <p>Engineer | Designer | Innovator</p>
+      <h1 class="fade-in">Hi, I'm Nathaniel Karau</h1>
+      <p class="mission fade-in">Mechanical Engineer passionate about space systems, advanced manufacturing, and solving complex design challenges.</p>
       <!-- Profile Image -->
-      <img src="assets/selfie.jpg" alt="My Photo">
+      <img src="assets/selfie.jpg" alt="My Photo" class="fade-in">
 
       <!-- Buttons -->
-      <div class="button-group">
+      <div class="button-group fade-in">
         <a href="#projects">Projects</a>
-        <a href="assets/Nathaniel_Karau_Resume.pdf" target="_blank">Resume</a>
+        <a href="assets/Nathaniel_Karau_Resume.pdf" download>Download Resume</a>
       </div>
     </section>
 
@@ -241,22 +328,54 @@
       <p>I'm passionate about engineering and design, constantly seeking innovative solutions to complex problems.</p>
     </section>
 
+    <!-- Skills Section -->
+    <section id="skills" class="section skills">
+      <h2>Skills</h2>
+      <div class="skills-list">
+        <div class="skill">SolidWorks</div>
+        <div class="skill">AutoCAD</div>
+        <div class="skill">Inventor</div>
+        <div class="skill">MATLAB</div>
+        <div class="skill">Python</div>
+        <div class="skill">GD&T</div>
+      </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section id="timeline" class="section timeline">
+      <h2>My Journey</h2>
+      <ul>
+        <li>
+          <h3>2024 – Present</h3>
+          <p>Mechanical/Design Engineering Projects – Freelance & Personal Portfolio</p>
+        </li>
+        <li>
+          <h3>2020 – 2024</h3>
+          <p>B.S. in Mechanical Engineering – [Your University]</p>
+        </li>
+        <li>
+          <h3>2019 – Internship</h3>
+          <p>Engineering Intern – [Company Name]</p>
+        </li>
+      </ul>
+    </section>
+
     <!-- Projects Section -->
     <section id="projects" class="section projects">
       <h2>Projects</h2>
       <div class="project-list">
-        <div class="project-card">
+        <a href="https://github.com/" target="_blank" class="project-card">
           <img src="assets/cool_picture.jpg" alt="Project 1">
-          <p>Project 1 Description</p>
-        </div>
-        <div class="project-card">
+          <p>Project 1 – GitHub Repo</p>
+        </a>
+        <a href="https://yourlink.com" target="_blank" class="project-card">
           <img src="assets/cool_picture.jpg" alt="Project 2">
-          <p>Project 2 Description</p>
-        </div>
-        <div class="project-card">
+          <p>Project 2 – Case Study</p>
+        </a>
+        <a href="assets/project_doc.pdf" target="_blank" class="project-card">
           <img src="assets/cool_picture.jpg" alt="Project 3">
-          <p>Project 3 Description</p>
-        </div>
+          <p>Project 3 – PDF Report</p>
+        </a>
       </div>
     </section>
 
