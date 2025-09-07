@@ -95,6 +95,29 @@
       object-fit: cover;
     }
 
+    /* Buttons below profile */
+    .home .button-group {
+      margin-top: 1.5rem;
+      display: flex;
+      gap: 1rem;
+    }
+
+    .home .button-group a {
+      padding: 0.8rem 1.5rem;
+      border: none;
+      border-radius: 8px;
+      background: #444;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .home .button-group a:hover {
+      background: #ffcc00;
+      color: black;
+    }
+
     /* About */
     .about {
       background: #2a2a2a;
@@ -191,6 +214,7 @@
       <li><a href="#home">Home</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#projects">Projects</a></li>
+      <li><a href="assets/resume.pdf" target="_blank">Resume</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
@@ -201,8 +225,14 @@
     <section id="home" class="section home">
       <h1>Hi, I'm Nathaniel Karau</h1>
       <p>Engineer | Designer | Innovator</p>
-      <!-- Loads from assets/selfie.jpg -->
+      <!-- Profile Image -->
       <img src="assets/selfie.jpg" alt="My Photo">
+
+      <!-- Buttons -->
+      <div class="button-group">
+        <a href="#projects">Projects</a>
+        <a href="assets/resume.pdf" target="_blank">Resume</a>
+      </div>
     </section>
 
     <!-- About Section -->
@@ -220,8 +250,12 @@
           <p>Project 1 Description</p>
         </div>
         <div class="project-card">
-          <img src=assets/selfie.jpg" alt="Project 2">
+          <img src="assets/cool_picture.jpg" alt="Project 2">
           <p>Project 2 Description</p>
+        </div>
+        <div class="project-card">
+          <img src="assets/cool_picture.jpg" alt="Project 3">
+          <p>Project 3 Description</p>
         </div>
       </div>
     </section>
