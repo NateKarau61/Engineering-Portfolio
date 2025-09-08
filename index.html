@@ -64,9 +64,20 @@
     .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1rem; }
     .skill { background: #333; padding: 0.5rem; border-radius: 6px; }
 
-    /* Work Experience */
-    .work-experience { max-width: 100%; text-align: center; padding: 1rem; }
-    .work-exerience-item { width: 100%; margin: 1rem 0; padding: 1rem; background: #2d2d2d; border-radius: 8px; text-align: center; }
+    /* Work Experience & Awards */
+    .work-experience-list, .awards-list {
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+      padding: 1rem;
+    }
+    .work-experience-item, .award-item {
+      background: #2d2d2d;
+      margin: 1rem 0;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    }
 
     /* Projects */
     .projects h2 { margin-bottom: 1rem; }
@@ -100,7 +111,7 @@
     <li><a href="#home">Home</a></li>
     <li><a href="#about">About</a></li>
     <li><a href="#skills">Skills</a></li>
-    <li><a href="#timeline">Timeline</a></li>
+    <li><a href="#work-experience">Work Experience</a></li>
     <li><a href="#projects">Projects</a></li>
     <li><a href="#contact">Contact</a></li>
     <li class="resume-link">
@@ -170,8 +181,8 @@
 
   <!-- Work Experience -->
   <section id="work-experience" class="section work-experience">
-    <h2>Timeline</h2>
-    <div class="work-experience">
+    <h2>Work Experience</h2>
+    <div class="work-experience-list">
       <div class="work-experience-item">
         <h3>2025 - Present</h3>
         <p>Engineering Project Manager at XYZ Company</p>
@@ -183,6 +194,22 @@
       <div class="work-experience-item">
         <h3>2019 - 2023</h3>
         <p>B.S. Mechanical Engineering - University of Minnesota</p>
+      </div>
+    </div>
+
+    <h2 style="margin-top: 3rem;">Awards & Achievements</h2>
+    <div class="awards-list">
+      <div class="award-item">
+        <h3>2024</h3>
+        <p>Outstanding Engineer Award - XYZ Aerospace</p>
+      </div>
+      <div class="award-item">
+        <h3>2023</h3>
+        <p>1st Place - National Student Design Competition</p>
+      </div>
+      <div class="award-item">
+        <h3>2022</h3>
+        <p>Dean’s List - University of Minnesota</p>
       </div>
     </div>
   </section>
@@ -224,8 +251,8 @@
       <a href="https://twitter.com" target="_blank"><i class="fab fa-x-twitter"></i></a>
       <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
       <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
-      <a href="https://facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i>
-      <a href="https://tiktok.com" target="_blank"><i class="fa-brands fa-tiktok"></i>
+      <a href="https://facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+      <a href="https://tiktok.com" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
     </div>
   </section>
 
