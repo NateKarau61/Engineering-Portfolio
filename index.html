@@ -10,9 +10,7 @@
   html, body { width: 100%; font-family: 'Arial', sans-serif; background: #1a1a1a; color: #e0e0e0; scroll-behavior: smooth; }
 
   /* Variables */
-  :root {
-    --accent: #00aaff; /* bright blue accent */
-  }
+  :root { --accent: #00aaff; }
 
   /* Sidebar */
   .sidebar {
@@ -28,6 +26,13 @@
   .sidebar ul li { margin: 1.5rem 0; text-align: center; }
   .sidebar ul li a { color: #e0e0e0; text-decoration: none; font-weight: bold; font-size: 1.2rem; transition: color 0.3s; }
   .sidebar ul li a:hover { color: var(--accent); }
+  .sidebar ul li.resume-link a { 
+    border: 2px solid var(--accent); 
+    padding: 0.4rem 0.6rem; 
+    border-radius: 6px; 
+    display: inline-block;
+  }
+  .sidebar ul li.resume-link a:hover { background: var(--accent); color: black; }
 
   /* Main Content */
   .content { margin-left: 220px; }
@@ -44,7 +49,7 @@
   .home .button-group a:hover { background: var(--accent); color: black; }
 
   /* About */
-  .about { background: #2a2a2a; max-width: 800px; text-align: left; }
+  .about { background: #2a2a2a; max-width: 100%; text-align: center; }
 
   /* Skills */
   .skills-category { margin-top: 2rem; width: 100%; max-width: 900px; text-align: center; }
@@ -72,14 +77,20 @@
 
   /* Social */
   .social { display: flex; gap: 1rem; margin-top: 1rem; justify-content: center; }
-  .social a { color: #e0e0e0; font-size: 1.5rem; transition: color 0.3s; }
+  .social a { color: #e0e0e0; font-size: 1.5rem; transition: color 0.3s; display: flex; align-items: center; gap: 0.3rem; }
   .social a:hover { color: var(--accent); }
 
   /* Footer */
   footer { text-align: center; padding: 1rem; background: #111; color: #aaa; }
 
-  /* Icon for download */
+  /* Icons */
   .icon { display: inline-block; width: 16px; height: 16px; background: url('assets/download-icon.svg') no-repeat center center; background-size: contain; }
+  .social-icon { width: 20px; height: 20px; display: inline-block; background-size: cover; }
+  .linkedin { background-image: url('assets/linkedin.svg'); }
+  .github { background-image: url('assets/github.svg'); }
+  .twitter { background-image: url('assets/twitter.svg'); }
+  .instagram { background-image: url('assets/instagram.svg'); }
+  .youtube { background-image: url('assets/youtube.svg'); }
 </style>
 </head>
 <body>
@@ -93,8 +104,8 @@
     <li><a href="#skills">Skills</a></li>
     <li><a href="#timeline">Timeline</a></li>
     <li><a href="#projects">Projects</a></li>
-    <li><a href="assets/Nathaniel_Karau_Resume.pdf" target="_blank">Resume</a></li>
     <li><a href="#contact">Contact</a></li>
+    <li class="resume-link"><a href="assets/Nathaniel_Karau_Resume.pdf" download><span class="icon"></span> Resume</a></li>
   </ul>
 </nav>
 
@@ -204,9 +215,11 @@
       <button type="submit">Send</button>
     </form>
     <div class="social">
-      <a href="#" target="_blank">LinkedIn</a>
-      <a href="#" target="_blank">GitHub</a>
-      <a href="#" target="_blank">Twitter</a>
+      <a href="#" target="_blank"><span class="social-icon linkedin"></span> LinkedIn</a>
+      <a href="#" target="_blank"><span class="social-icon github"></span> GitHub</a>
+      <a href="#" target="_blank"><span class="social-icon twitter"></span> Twitter</a>
+      <a href="#" target="_blank"><span class="social-icon instagram"></span> Instagram</a>
+      <a href="#" target="_blank"><span class="social-icon youtube"></span> YouTube</a>
     </div>
   </section>
 
