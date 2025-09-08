@@ -17,28 +17,15 @@
     :root { --accent: #00aaff; }
 
     /* Sidebar */
-    .sidebar {
-      position: fixed;
-      top: 0; left: 0;
-      width: 220px; height: 100%;
-      background: #111;
-      padding: 2rem 1rem;
-      display: flex; flex-direction: column; align-items: center;
-    }
+    .sidebar {  position: fixed; top: 0; left: 0;  width: 220px; height: 100%;  background: #111;  padding: 2rem 1rem;  display: flex; flex-direction: column; align-items: center;}
     .sidebar h2 { color: white; margin-bottom: 2rem; }
     .sidebar ul { list-style: none; width: 100%; padding: 0; }
     .sidebar ul li { margin: 1.5rem 0; text-align: center; }
     .sidebar ul li a { color: #e0e0e0; text-decoration: none; font-weight: bold; font-size: 1.2rem; transition: color 0.3s; }
     .sidebar ul li a:hover { color: var(--accent); }
-    .sidebar ul li.resume-link a { 
-      border: 2px solid var(--accent); 
-      padding: 0.4rem 0.6rem; 
-      border-radius: 6px; 
-      display: inline-block;
-    }
+    .sidebar ul li.resume-link a {   border: 2px solid var(--accent);   padding: 0.4rem 0.6rem;  border-radius: 6px;  display: inline-block;}
     .sidebar ul li.resume-link a:hover { background: var(--accent); color: black; }
-    .resume-btn {padding: 0.8rem 1.5rem; border-radius: 8px; background: var(--accent);
-    color: white; text-decoration: none; display: flex; align-items: center; gap: 0.5rem; font-weight: bold;}
+    .resume-btn {padding: 0.8rem 1.5rem; border-radius: 8px; background: var(--accent); color: white; text-decoration: none; display: flex; align-items: center; gap: 0.5rem; font-weight: bold;}
     .resume-btn:hover { background: #0088cc; color: white;}
 
     /* Main Content */
@@ -65,19 +52,8 @@
     .skill { background: #333; padding: 0.5rem; border-radius: 6px; }
 
     /* Work Experience & Awards */
-    .work-experience-list, .awards-list {
-      max-width: 900px;
-      margin: 0 auto;
-      text-align: center;
-      padding: 1rem;
-    }
-    .work-experience-item, .award-item {
-      background: #2d2d2d;
-      margin: 1rem 0;
-      padding: 1rem;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-    }
+    .work-experience-list, .awards-list { display: flex; gap: 2rem; margin-top: 2rem; flex-wrap: wrap; justify-content: center; }
+    .work-experience-item, .award-item {  background: #2d2d2d;  margin: 1rem 0;  padding: 1rem;  border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.3);}
 
     /* Projects */
     .projects h2 { margin-bottom: 1rem; }
