@@ -33,19 +33,9 @@
     display: inline-block;
   }
   .sidebar ul li.resume-link a:hover { background: var(--accent); color: black; }
-  .resume-btn {
-  padding: 0.8rem 1.5rem;
-  border-radius: 8px;
-  background: var(--accent);
-  color: white;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-weight: bold;}
-.resume-btn:hover {
-  background: #0088cc;
-  color: white;}
+  .resume-btn {padding: 0.8rem 1.5rem; border-radius: 8px; background: var(--accent);
+  color: white; text-decoration: none; display: flex; align-items: center; gap: 0.5rem; font-weight: bold;}
+  .resume-btn:hover { background: #0088cc; color: white;}
 
   /* Main Content */
   .content { margin-left: 220px; }
@@ -71,7 +61,7 @@
   .skill { background: #333; padding: 0.5rem; border-radius: 6px; }
 
   /* Timeline */
-  .timeline { width: 100%; max-width: 900px; padding: 1rem; }
+  .timeline { max-width: 100%; text-align: center; padding: 1rem; }
   .timeline-item { width: 100%; margin: 1rem 0; padding: 1rem; background: #2d2d2d; border-radius: 8px; text-align: center; }
 
   /* Projects */
@@ -105,13 +95,6 @@
   <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
   <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
 </div>
-  .icon { display: inline-block; width: 16px; height: 16px; background: url('assets/download-icon.svg') no-repeat center center; background-size: contain; }
-  .social-icon { width: 20px; height: 20px; display: inline-block; background-size: cover; }
-  .linkedin { background-image: url('assets/linkedin.svg'); }
-  .github { background-image: url('assets/github.svg'); }
-  .twitter { background-image: url('assets/twitter.svg'); }
-  .instagram { background-image: url('assets/instagram.svg'); }
-  .youtube { background-image: url('assets/youtube.svg'); }
 </style>
 </head>
 <body>
@@ -140,7 +123,8 @@
     <img src="assets/selfie.jpg" alt="My Photo">
     <div class="button-group">
       <a href="#projects">Projects</a>
-      <a href="assets/Nathaniel_Karau_Resume.pdf" download><span class="icon"></span> Resume</a>
+      <a href="assets/Nathaniel_Karau_Resume.pdf" download class="resume-btn">
+        <i class="fas fa-download"></i> Resume </a>
     </div>
   </section>
 
@@ -235,14 +219,14 @@
       <textarea placeholder="Your Message" required></textarea>
       <button type="submit">Send</button>
     </form>
-    <div class="social">
-      <a href="#" target="_blank"><span class="social-icon linkedin"></span> LinkedIn</a>
-      <a href="#" target="_blank"><span class="social-icon github"></span> GitHub</a>
-      <a href="#" target="_blank"><span class="social-icon twitter"></span> Twitter</a>
-      <a href="#" target="_blank"><span class="social-icon instagram"></span> Instagram</a>
-      <a href="#" target="_blank"><span class="social-icon youtube"></span> YouTube</a>
+     <div class="social">
+      <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+      <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
     </div>
-  </section>
+ </section>
 
   <footer>
     <p>© 2025 Nathaniel Karau</p>
