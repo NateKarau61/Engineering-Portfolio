@@ -52,13 +52,12 @@
     .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1rem; }
     .skill { background: #333; padding: 0.5rem; border-radius: 6px; }
 
-    /* Work Experience & Awards side by side */
-    .experience-awards {  display: flex;  justify-content: space-between;  gap: 2rem; width: 100%;  max-width: 1100px;  margin: 0 auto;}
-    .experience-awards .column {  flex: 1;  background: #2d2d2d;  padding: 1.5rem;  border-radius: 8px;}
-    .experience-awards h2 {  color: white;  margin-bottom: 1rem;  text-align: center;}
-    .work-experience-item, .award-item {  background: #333;  padding: 1rem;  border-radius: 6px;  margin: 1rem 0; box-shadow: 0 4px 8px rgba(0,0,0,0.3);}
-
-    
+    /* Work Experience Descriptions */
+    .work-experience-item {   cursor: pointer;   transition: background 0.3s; }
+    .work-experience-item:hover {   background: #444; }
+    .work-experience-item .description {   display: none;   margin-top: 0.5rem;   color: #ccc;   font-size: 0.9rem;   text-align: left;}
+    .work-experience-item.active .description {  display: block; }
+  
     /* Projects */
     .projects h2 { margin-bottom: 1rem; }
     .project-list { display: flex; gap: 2rem; margin-top: 2rem; flex-wrap: wrap; justify-content: center; }
@@ -170,38 +169,59 @@
     </div>
   </section>
 
-  <!-- Work Experience & Awards -->
+ <!-- Work Experience & Awards -->
 <section id="work-experience" class="section work-experience">
   <div class="experience-awards">
+
     <!-- Work Experience Column -->
     <div class="column">
       <h2>Work Experience</h2>
       <div class="work-experience-list">
-        <div class="work-experience-item">
+
+        <div class="work-experience-item" onclick="toggleDescription(this)">
           <h3>2024 - Present</h3>
-          <p>Wieser Form Fabrication | Engineering Project Manager</p>
+          <p><strong>Wieser Form Fabrication | Engineering Project Manager</strong></p>
+          <div class="description">
+            <p>Led engineering projects from design to implementation, managed cross-functional teams, and optimized fabrication processes to improve efficiency and quality.</p>
+          </div>
         </div>
-        <div class="work-experience-item">
+
+        <div class="work-experience-item" onclick="toggleDescription(this)">
           <h3>2023 - 2024</h3>
-          <p>Viracon | Senior Engineering Design Experience (Capstone)</p>
+          <p><strong>Viracon | Senior Engineering Design Experience (Capstone)</strong></p>
+          <div class="description">
+            <p>Collaborated on a senior design project focused on structural glass design, applying CAD modeling and manufacturing engineering principles to real-world challenges.</p>
+          </div>
         </div>
-        <div class="work-experience-item">
+
+        <div class="work-experience-item" onclick="toggleDescription(this)">
           <h3>2022 - 2024</h3>
-          <p>Walmart | Stocking Associate (CAP 1)</p>
+          <p><strong>Walmart | Stocking Associate (CAP 1)</strong></p>
+          <div class="description">
+            <p>Maintained inventory accuracy, optimized stocking processes, and supported operational flow in a fast-paced retail environment.</p>
+          </div>
         </div>
-        <div class="work-experience-item">
-          <h3>2022 - 2022</h3>
-          <p>Midwest Manufacturing | Engineering Manager Intern</p>
+
+        <div class="work-experience-item" onclick="toggleDescription(this)">
+          <h3>2022</h3>
+          <p><strong>Midwest Manufacturing | Engineering Manager Intern</strong></p>
+          <div class="description">
+            <p>Assisted with production planning, process optimization, and CAD modeling to support engineering management initiatives.</p>
+          </div>
         </div>
-         <div class="work-experience-item">
+
+        <div class="work-experience-item" onclick="toggleDescription(this)">
           <h3>2019 - 2025</h3>
-          <p>University of Wisconsin - Stout | Bachelor of Science in Manufacturing Engineering</p>
+          <p><strong>University of Wisconsin - Stout | B.S. Manufacturing Engineering</strong></p>
+          <div class="description">
+            <p>Developed expertise in manufacturing systems, design for manufacturability, lean practices, and engineering leadership through coursework and projects.</p>
+          </div>
+        </div>
+
       </div>
     </div>
-</section>
-      
+
     <!-- Awards Column -->
-<section id="awards" class="section work-experience">      
     <div class="column">
       <h2>Awards & Achievements</h2>
       <div class="awards-list">
@@ -219,11 +239,10 @@
         </div>
       </div>
     </div>
+
   </div>
 </section>
 
-
-  <!-- Projects -->
     <!-- Projects -->
   <section id="projects" class="section projects">
     <h2>Projects</h2>
@@ -280,9 +299,10 @@
   // Fade-in on scroll
   const sections = document.querySelectorAll('.section');
   const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => { if(entry.isIntersecting) entry.target.classList.add('visible'); });
-  }, { threshold: 0.1 });
+  entries.forEach(entry => { if(entry.isIntersecting) entry.target.classList.add('visible'); });}, { threshold: 0.1 });
   sections.forEach(section => observer.observe(section));
+  // Toggle Work Experience Descriptions
+function toggleDescription(item) {item.classList.toggle("active");}
 </script>
 </body>
 </html>
