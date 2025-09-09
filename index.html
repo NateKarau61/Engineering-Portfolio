@@ -47,6 +47,35 @@
     .about-category { margin-top: 2rem; width: 100%; max-width: 900px; text-align: wrap; }
     .about { background: #2a2a2a; max-width: 100%; text-align: center; }
 
+    /* About Me Section */
+#about {
+  padding: 80px 20px;           /* space around the section */
+  max-width: 1000px;            /* keeps content from stretching too wide */
+  margin: 0 auto;               /* centers section */
+  color: #ffffff;               /* text color */
+  background-color: #1a1a1a;    /* optional dark background */
+  font-family: 'Arial', sans-serif;}
+
+#about h1 {
+  font-size: 2.5rem;            /* large title */
+  text-align: center; 
+  margin-bottom: 40px;
+  color: #ff6600;               /* accent color for heading */}
+.about-category p {
+  font-size: 1.1rem;            /* readable paragraph size */
+  line-height: 1.8;             /* spacing between lines */
+  margin-bottom: 20px;          /* space between paragraphs */
+  text-align: justify;           /* optional for neat alignment */
+  max-width: 800px;             /* keeps paragraphs narrower for readability */
+  margin-left: auto;
+  margin-right: auto;}
+
+@media screen and (max-width: 768px) {
+#about {    padding: 50px 15px;  }
+#about h1 {   font-size: 2rem; }
+.about-category p {   font-size: 1rem;  }}
+
+
     /* Skills */
     .skills-category { margin-top: 2rem; width: 100%; max-width: 900px; text-align: center; }
     .skills-category h3 { color: var(--accent); margin-bottom: 1rem; }
@@ -130,21 +159,19 @@
   </section>
 
   <!-- About -->
-  <section id="about" class="section about">
-    <h1>About Me</h1>
-    <div class="about-category">
-    <p>I’m a Manufacturing Engineer with a passion for designing innovative solutions to complex challenges. My expertise spans CAD modeling, product and structural design, 
-      prototyping, and manufacturable part development. I enjoy taking ideas from concept to reality, whether it’s designing tilt table prototypes, optimizing manufacturing processes, 
-      or creating precise, functional components.
-      </p>
-    <p>Proficient in SolidWorks, Inventor, and AutoCAD, I combine technical skill with creative problem-solving to deliver practical, high-quality solutions. I thrive in collaborative 
-      environments, leading projects, organizing team strengths, and ensuring designs meet both performance and production requirements.
-      </p>
-    <p>Beyond engineering, I’m constantly exploring new technologies, 3D printing, and expanding my skill set to stay ahead in the manufacturing industries. 
-      I’m driven by the opportunity to work on challenging projects that push boundaries and make an impact.
-      </p>
-      </div>
-  </section>
+<section id="about" class="section about">
+  <h1>About Me</h1>
+  <div class="about-category">
+    <p>I’m a Manufacturing and Aerospace Engineer passionate about designing practical, innovative solutions to complex challenges.</p>
+    
+    <p>My expertise includes CAD modeling, product and structural design, prototyping, and creating manufacturable components. I enjoy bringing ideas from concept to reality—whether it’s designing prototypes, optimizing manufacturing processes, or developing functional parts.</p>
+    
+    <p>Proficient in SolidWorks, Inventor, and AutoCAD, I combine technical skills with creative problem-solving to deliver high-quality results. I thrive in collaborative environments, leading projects and ensuring designs meet both performance and production requirements.</p>
+    
+    <p>Beyond engineering, I’m always exploring new technologies, experimenting with 3D printing, and expanding my skill set to stay ahead in the aerospace and manufacturing industries. I’m motivated by the opportunity to tackle challenging projects that make a real impact.</p>
+  </div>
+</section>
+
 
   <!-- Skills -->
   <section id="skills" class="section skills">
