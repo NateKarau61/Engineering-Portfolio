@@ -53,7 +53,10 @@
     .skill { background: #333; padding: 0.5rem; border-radius: 6px; }
 
 /* Work Experience & Awards */
-.work-experience-list,.awards-list {  display: flex;  flex-direction: column;  gap: 1.5rem;  width: 100%; text-align: center;  max-width: 800px;  margin: 2rem auto 0 auto;}
+.work-experience-list,
+.awards-list {  display: flex;  flex-direction: column;  gap: 1.5rem;width: 100%;  max-width: 800px;  margin: 2rem auto 0 auto;
+              align-items: center;   /* centers the cards horizontally */
+              justify-content: center; /* keeps them centered vertically inside section */}
 .work-experience-item,.award-item {  background: #2b2b2b;  border: 1px solid #444;  border-radius: 10px;  padding: 1rem 1.5rem;  text-align: left;  box-shadow: 0 6px 12px rgba(0,0,0,0.3);  transition: transform 0.3s, background 0.3s;}
 .work-experience-item:hover,.award-item:hover {  transform: translateY(-5px);  background: #333;}
 
@@ -183,7 +186,7 @@
 
     <div class="work-experience-item" onclick="toggleDescription(this)">
       <h3>2024 - Present</h3>
-      <p><strong>Wieser Form Fabrication | Engineering Project Manager</strong></p>
+      <p><strong><i class="fa-solid fa-arrow-pointer"></i>Wieser Form Fabrication | Engineering Project Manager</strong></p>
       <div class="description">
         <p>Led engineering projects from design to implementation, managed cross-functional teams, and optimized fabrication processes to improve efficiency and quality.</p>
       </div>
@@ -191,7 +194,7 @@
 
     <div class="work-experience-item" onclick="toggleDescription(this)">
       <h3>2023 - 2024</h3>
-      <p><strong>Viracon | Senior Engineering Design Experience (Capstone)</strong></p>
+      <p><strong><i class="fa-solid fa-arrow-pointer">Viracon | Senior Engineering Design Experience (Capstone)</strong></p>
       <div class="description">
         <p>Collaborated on a senior design project focused on structural glass design, applying CAD modeling and manufacturing engineering principles to real-world challenges.</p>
       </div>
@@ -199,15 +202,15 @@
 
     <div class="work-experience-item" onclick="toggleDescription(this)">
       <h3>2022 - 2024</h3>
-      <p><strong>Walmart | Stocking Associate (CAP 1)</strong></p>
+      <p><strong><i class="fa-solid fa-arrow-pointer">Walmart | Stocking Associate (CAP 1)</strong></p>
       <div class="description">
         <p>Maintained inventory accuracy, optimized stocking processes, and supported operational flow in a fast-paced retail environment.</p>
       </div>
     </div>
 
     <div class="work-experience-item" onclick="toggleDescription(this)">
-      <h3>2022</h3>
-      <p><strong>Midwest Manufacturing | Engineering Manager Intern</strong></p>
+      <h3>2022-2022 (Internship)</h3>
+      <p><strong><i class="fa-solid fa-arrow-pointer">Midwest Manufacturing | Engineering Manager Intern</strong></p>
       <div class="description">
         <p>Assisted with production planning, process optimization, and CAD modeling to support engineering management initiatives.</p>
       </div>
@@ -215,7 +218,7 @@
 
     <div class="work-experience-item" onclick="toggleDescription(this)">
       <h3>2019 - 2025</h3>
-      <p><strong>University of Wisconsin - Stout | B.S. Manufacturing Engineering</strong></p>
+      <p><strong><i class="fa-solid fa-arrow-pointer">University of Wisconsin - Stout | B.S. Manufacturing Engineering</strong></p>
       <div class="description">
         <p>Developed expertise in manufacturing systems, design for manufacturability, lean practices, and engineering leadership through coursework and projects.</p>
       </div>
