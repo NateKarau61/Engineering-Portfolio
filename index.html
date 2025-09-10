@@ -10,149 +10,298 @@
   <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
 
   <style>
-    /* Reset */
+    /* -------------------------
+       GLOBAL STYLES & RESET
+    ------------------------- */
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    html, body { width: 100%; font-family: 'Arial', sans-serif; background: #1a1a1a; color: #e0e0e0; scroll-behavior: smooth; }
+    html, body {
+      width: 100%;
+      font-family: 'Arial', sans-serif;
+      background: #1a1a1a;
+      color: #e0e0e0;
+      scroll-behavior: smooth;
+    }
 
-    /* Variables */
-    :root { --accent: #00aaff; }
+    :root { --accent: #00aaff; } /* accent color variable */
 
-    /* Sidebar */
-    .sidebar {  position: fixed; top: 0; left: 0;  width: 220px; height: 100%;  background: #111;  padding: 2rem 1rem;  display: flex; flex-direction: column; align-items: center;}
+    /* -------------------------
+       SIDEBAR NAVIGATION
+    ------------------------- */
+    .sidebar {
+      position: fixed; top: 0; left: 0;
+      width: 220px; height: 100%;
+      background: #111;
+      padding: 2rem 1rem;
+      display: flex; flex-direction: column; align-items: center;
+    }
     .sidebar h2 { color: white; margin-bottom: 2rem; }
     .sidebar ul { list-style: none; width: 100%; padding: 0; }
     .sidebar ul li { margin: 1.5rem 0; text-align: center; }
-    .sidebar ul li a { color: #e0e0e0; text-decoration: none; font-weight: bold; font-size: 1.2rem; transition: color 0.3s; }
+    .sidebar ul li a {
+      color: #e0e0e0;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.2rem;
+      transition: color 0.3s;
+    }
     .sidebar ul li a:hover { color: var(--accent); }
-    .sidebar ul li.resume-link a {   border: 2px solid var(--accent);   padding: 0.4rem 0.6rem;  border-radius: 6px;  display: inline-block;}
-    .sidebar ul li.resume-link a:hover { background: var(--accent); color: black; }
-    .resume-btn {padding: 0.8rem 1.5rem; border-radius: 8px; background: var(--accent); color: white; text-decoration: none; display: flex; align-items: center; gap: 0.5rem; font-weight: bold;}
-    .resume-btn:hover { background: #0088cc; color: white;}
 
-    /* Main Content */
-    .content { margin-left: 220px; }
+    /* Resume link styling */
+    .sidebar ul li.resume-link a {
+      border: 2px solid var(--accent);
+      padding: 0.4rem 0.6rem;
+      border-radius: 6px;
+      display: inline-block;
+    }
+    .sidebar ul li.resume-link a:hover {
+      background: var(--accent);
+      color: black;
+    }
 
-    /* Section base */
-    .section { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 2rem; border-bottom: 1px solid #333; opacity: 0; transform: translateY(20px); transition: all 1s ease; }
+    /* Resume button style (used in Home too) */
+    .resume-btn {
+      padding: 0.8rem 1.5rem;
+      border-radius: 8px;
+      background: var(--accent);
+      color: white;
+      text-decoration: none;
+      display: flex; align-items: center; gap: 0.5rem;
+      font-weight: bold;
+    }
+    .resume-btn:hover { background: #0088cc; color: white; }
+
+    /* -------------------------
+       MAIN CONTENT AREA
+    ------------------------- */
+    .content { margin-left: 220px; } /* shifts right for sidebar */
+
+    /* Section base styling */
+    .section {
+      min-height: 100vh;
+      display: flex; flex-direction: column;
+      justify-content: center; align-items: center;
+      text-align: center;
+      padding: 2rem;
+      border-bottom: 1px solid #333;
+      opacity: 0; transform: translateY(20px);
+      transition: all 1s ease;
+    }
     .section.visible { opacity: 1; transform: translateY(0); }
 
-    /* Home */
+    /* -------------------------
+       HOME SECTION
+    ------------------------- */
     .home { background: #1e1e1e; }
-    .home img { width: 180px; height: 180px; border-radius: 50%; margin-top: 1rem; border: 3px solid #444; object-fit: cover; }
-    .home .button-group { margin-top: 1.5rem; display: flex; gap: 1rem; }
-    .home .button-group a { padding: 0.8rem 1.5rem; border-radius: 8px; background: #444; color: white; text-decoration: none; font-weight: bold; transition: background 0.3s; display: flex; align-items: center; gap: 0.5rem; }
+    .home img {
+      width: 180px; height: 180px;
+      border-radius: 50%; margin-top: 1rem;
+      border: 3px solid #444; object-fit: cover;
+    }
+    .home .button-group {
+      margin-top: 1.5rem; display: flex; gap: 1rem;
+    }
+    .home .button-group a {
+      padding: 0.8rem 1.5rem;
+      border-radius: 8px;
+      background: #444; color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+      display: flex; align-items: center; gap: 0.5rem;
+    }
     .home .button-group a:hover { background: var(--accent); color: black; }
 
-    /* About */
-    .about-category { margin-top: 2rem; width: 100%; max-width: 900px; text-align: wrap; }
-    .about { background: #2a2a2a; max-width: 100%; text-align: center; }
+    /* -------------------------
+       ABOUT SECTION
+    ------------------------- */
+    #about {
+      padding: 80px 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+      color: white;
+      background-color: #1a1a1a;
+    }
+    #about h1 {
+      font-size: 2.5rem;
+      text-align: center;
+      margin-bottom: 40px;
+      color: var(--accent);
+    }
+    .about-category p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      margin-bottom: 20px;
+      text-align: justify;
+      max-width: 800px;
+      margin-left: auto; margin-right: auto;
+    }
 
-    /* About Me Section */
-#about {
-  padding: 80px 20px;           /* space around the section */
-  max-width: 1000px;            /* keeps content from stretching too wide */
-  margin: 0 auto;               /* centers section */
-  color: white;         /* text color */
-  background-color: #1a1a1a;    /* optional dark background */
-  font-family: 'Arial', sans-serif;}
+    @media screen and (max-width: 768px) {
+      #about { padding: 50px 15px; }
+      #about h1 { font-size: 2rem; }
+      .about-category p { font-size: 1rem; }
+    }
 
-#about h1 {
-  font-size: 2.5rem;            /* large title */
-  text-align: center; 
-  margin-bottom: 40px;
-  color: var(--accent);               /* accent color for heading */}
-.about-category p {
-  font-size: 1.1rem;            /* readable paragraph size */
-  line-height: 1.8;             /* spacing between lines */
-  margin-bottom: 20px;          /* space between paragraphs */
-  text-align: justify;           /* optional for neat alignment */
-  max-width: 800px;             /* keeps paragraphs narrower for readability */
-  margin-left: auto;
-  margin-right: auto;}
-
-@media screen and (max-width: 768px) {
-#about {    padding: 50px 15px;  }
-#about h1 {   font-size: 2rem; }
-.about-category p {   font-size: 1rem;  }}
-
-
-    /* Skills */
-    .skills-category { margin-top: 2rem; width: 100%; max-width: 900px; text-align: center; }
+    /* -------------------------
+       SKILLS SECTION
+    ------------------------- */
+    .skills-category {
+      margin-top: 2rem;
+      width: 100%; max-width: 900px;
+      text-align: center;
+    }
     .skills-category h3 { color: var(--accent); margin-bottom: 1rem; }
+
+    /* Skill grid - keeps rows aligned but boxes wrap text */
     .skills-grid {
-  display: flex;                /* Use flexbox instead of grid */
-  flex-wrap: wrap;              /* Allow wrapping to next line */
-  gap: 1rem;                    /* Space between skill boxes */
-  justify-content: center;      /* Keep rows centered */}
+      display: flex; flex-wrap: wrap;
+      gap: 1rem; justify-content: center;
+    }
     .skill {
-  background: #333;
-  padding: 0.4rem 0.8rem;       /* Tight padding around text */
-  border-radius: 6px;
-  display: inline-block;        /* Box hugs text width */
-  white-space: nowrap;          /* Prevent words from splitting */
-  text-align: center;}
+      background: #333;
+      padding: 0.4rem 0.8rem;
+      border-radius: 6px;
+      display: inline-block;
+      white-space: nowrap;
+      text-align: center;
+    }
 
+    /* -------------------------
+       WORK EXPERIENCE & AWARDS
+    ------------------------- */
+    .work-experience-list,
+    .awards-list {
+      display: flex; flex-direction: column;
+      gap: 1.5rem;
+      width: 100%; max-width: 800px;
+      margin: 2rem auto 0 auto;
+      align-items: center; justify-content: center;
+    }
+    .work-experience-item, .award-item {
+      background: #2b2b2b;
+      border: 1px solid #444;
+      border-radius: 10px;
+      padding: 1rem 1.5rem;
+      text-align: left;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+      transition: transform 0.3s, background 0.3s;
+      cursor: pointer;
+    }
+    .work-experience-item:hover, .award-item:hover {
+      transform: translateY(-5px); background: #333;
+    }
+    .work-experience-item h3, .award-item h3 {
+      margin-bottom: 0.3rem;
+      color: var(--accent); text-align: center;
+    }
+    .work-experience-item p strong, .award-item p {
+      color: #fff; text-align: center;
+    }
 
-/* Work Experience & Awards */
-.work-experience-list,
-.awards-list {  display: flex;  flex-direction: column;  gap: 1.5rem;width: 100%;  max-width: 800px;  margin: 2rem auto 0 auto;
-              align-items: center;   /* centers the cards horizontally */
-              justify-content: center; /* keeps them centered vertically inside section */}
-.work-experience-item,.award-item {  background: #2b2b2b;  border: 1px solid #444;  border-radius: 10px;  padding: 1rem 1.5rem;  text-align: left;  box-shadow: 0 6px 12px rgba(0,0,0,0.3);  transition: transform 0.3s, background 0.3s;}
-.work-experience-item:hover,.award-item:hover {  transform: translateY(-5px);  background: #333;}
+    /* Hidden expandable descriptions */
+    .work-experience-item .description,
+    .award-item .description,
+    .project-card .description {
+      display: none;
+      margin-top: 0.8rem;
+      color: #ccc;
+      font-size: 0.95rem;
+      line-height: 1.4;
+    }
+    /* Show description when parent is active */
+    .work-experience-item.active .description,
+    .award-item.active .description,
+    .project-card.active .description {
+      display: block;
+    }
 
-/* Headings inside cards */
-.work-experience-item h3,.award-item h3 {  margin-bottom: 0.3rem;  color: var(--accent); text-align: center;}
-.work-experience-item p strong,.award-item p {  color: #fff; text-align: center;}
-
-/* Expandable descriptions for Work Experience */
-.work-experience-item .description {  display: none;  margin-top: 0.8rem;  color: #ccc;  font-size: 0.95rem;  line-height: 1.4;}
-.work-experience-item.active .description {  display: block;}
-  
-    /* Projects */
+    /* -------------------------
+       PROJECTS SECTION
+    ------------------------- */
     .projects h1 { margin-bottom: 1rem; }
-    .project-list { display: flex; gap: 2rem; margin-top: 2rem; flex-wrap: wrap; justify-content: center; }
-    .project-card { background: #333; color: #e0e0e0; padding: 1rem; border-radius: 10px; width: 250px; box-shadow: 0 8px 15px rgba(0,0,0,0.3); transition: transform 0.3s; }
+    .project-list {
+      display: flex; gap: 2rem;
+      margin-top: 2rem;
+      flex-wrap: wrap; justify-content: center;
+    }
+    .project-card {
+      background: #333; color: #e0e0e0;
+      padding: 1rem;
+      border-radius: 10px;
+      width: 250px;
+      box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+      transition: transform 0.3s;
+      cursor: pointer;
+    }
     .project-card:hover { transform: translateY(-10px); }
-    .project-card img { width: 100%; height: 150px; border-radius: 8px; margin-bottom: 1rem; object-fit: cover; }
-    .project-card a { text-decoration: none; color: var(--accent); font-weight: bold; }
-    .project-card {  background: #333;  color: #e0e0e0;  padding: 1rem;  border-radius: 10px;  width: 250px;  box-shadow: 0 8px 15px rgba(0,0,0,0.3);  transition: transform 0.3s;  cursor: pointer;}
-    .project-card:hover { transform: translateY(-10px); }
-    .project-card img {  width: 100%;  height: 150px;  border-radius: 8px;  margin-bottom: 1rem; object-fit: cover;}
+    .project-card img {
+      width: 100%; height: 150px;
+      border-radius: 8px; margin-bottom: 1rem;
+      object-fit: cover;
+    }
+    .project-card a {
+      text-decoration: none;
+      color: var(--accent);
+      font-weight: bold;
+    }
+    .project-card .description a {
+      display: inline-block;
+      margin-right: 10px;
+      color: var(--accent);
+      text-decoration: none;
+    }
 
-/* hidden description */
-.project-card .description {  display: none;  margin-top: 1rem;  font-size: 0.9rem;  color: #ccc;}
-.project-card .description a {  display: inline-block;  margin-right: 10px;  color: var(--accent); text-decoration: none;}
-.project-card.active .description {  display: block;}
-
-/* Hidden expandable descriptions */
-.work-experience-item .description,
-.award-item .description,
-.project-card .description {  display: none;  margin-top: 0.8rem;  color: #ccc;  font-size: 0.95rem;  line-height: 1.4;}
-
-/* Show when active */
-.work-experience-item.active .description,
-.award-item.active .description,
-.project-card.active .description {  display: block;}
-      
-    /* Contact */
-    .contact form { display: flex; flex-direction: column; gap: 1rem; width: 300px; }
-    .contact input, .contact textarea { padding: 0.8rem; border: none; border-radius: 5px; background: #333; color: #e0e0e0; }
-    .contact button { padding: 0.8rem; border: none; border-radius: 5px; background: #555; color: white; cursor: pointer; transition: background 0.3s; }
+    /* -------------------------
+       CONTACT SECTION
+    ------------------------- */
+    .contact form {
+      display: flex; flex-direction: column;
+      gap: 1rem; width: 300px;
+    }
+    .contact input, .contact textarea {
+      padding: 0.8rem;
+      border: none; border-radius: 5px;
+      background: #333; color: #e0e0e0;
+    }
+    .contact button {
+      padding: 0.8rem;
+      border: none; border-radius: 5px;
+      background: #555; color: white;
+      cursor: pointer; transition: background 0.3s;
+    }
     .contact button:hover { background: #777; }
 
-    /* Social */
-    .social { display: flex; gap: 1rem; margin-top: 1rem; justify-content: center; }
-    .social a { color: #e0e0e0; font-size: 1.5rem; transition: color 0.3s; display: flex; align-items: center; gap: 0.3rem; text-decoration: none; }
+    /* Social icons row */
+    .social {
+      display: flex; gap: 1rem;
+      margin-top: 1rem;
+      justify-content: center;
+    }
+    .social a {
+      color: #e0e0e0;
+      font-size: 1.5rem;
+      transition: color 0.3s;
+      display: flex; align-items: center; gap: 0.3rem;
+      text-decoration: none;
+    }
     .social a:hover { color: var(--accent); }
 
-    /* Footer */
-    footer { text-align: center; padding: 1rem; background: #111; color: #aaa; }
+    /* -------------------------
+       FOOTER
+    ------------------------- */
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #111;
+      color: #aaa;
+    }
   </style>
 </head>
 <body>
 
-<!-- Sidebar -->
+<!-- =========================
+     SIDEBAR NAVIGATION
+========================= -->
 <nav class="sidebar">
   <h2>Portfolio</h2>
   <ul>
@@ -171,9 +320,14 @@
   </ul>
 </nav>
 
-<!-- Content -->
+<!-- =========================
+     MAIN CONTENT SECTIONS
+========================= -->
 <div class="content">
-  <!-- Home -->
+
+  <!-- =========================
+       HOME SECTION
+  ========================= -->
   <section id="home" class="section home">
     <h1>Hi, I'm Nathaniel Karau</h1>
     <p>Engineer | Designer | Innovator</p>
@@ -187,24 +341,25 @@
     </div>
   </section>
 
-  <!-- About -->
-<section id="about" class="section about">
-  <h1>About Me</h1>
-  <div class="about-category">
-    <p>I’m a Manufacturing and Aerospace Engineer passionate about designing practical, innovative solutions to complex challenges.</p>
-    
-    <p>My expertise includes CAD modeling, product and structural design, prototyping, and creating manufacturable components. I enjoy bringing ideas from concept to reality—whether it’s designing prototypes, optimizing manufacturing processes, or developing functional parts.</p>
-    
-    <p>Proficient in SolidWorks, Inventor, and AutoCAD, I combine technical skills with creative problem-solving to deliver high-quality results. I thrive in collaborative environments, leading projects and ensuring designs meet both performance and production requirements.</p>
-    
-    <p>Beyond engineering, I’m always exploring new technologies, experimenting with 3D printing, and expanding my skill set to stay ahead in the aerospace and manufacturing industries. I’m motivated by the opportunity to tackle challenging projects that make a real impact.</p>
-  </div>
-</section>
+  <!-- =========================
+       ABOUT SECTION
+  ========================= -->
+  <section id="about" class="section about">
+    <h1>About Me</h1>
+    <div class="about-category">
+      <p>I’m a Manufacturing and Aerospace Engineer passionate about designing practical, innovative solutions to complex challenges.</p>
+      <p>My expertise includes CAD modeling, product and structural design, prototyping, and creating manufacturable components...</p>
+      <p>Proficient in SolidWorks, Inventor, and AutoCAD, I combine technical skills with creative problem-solving...</p>
+      <p>Beyond engineering, I’m always exploring new technologies, experimenting with 3D printing, and expanding my skill set...</p>
+    </div>
+  </section>
 
-
-  <!-- Skills -->
+  <!-- =========================
+       SKILLS SECTION
+  ========================= -->
   <section id="skills" class="section skills">
     <h1>Skills</h1>
+    <!-- Advanced -->
     <div class="skills-category">
       <h3>Advanced</h3>
       <div class="skills-grid">
@@ -216,17 +371,19 @@
         <div class="skill">Process Flow Diagrams</div>
         <div class="skill">Lean Manufacturing</div>
         <div class="skill">Cross-Functional Team</div>
-        <div class="skill">Technical Writing</div>        
+        <div class="skill">Technical Writing</div>
         <div class="skill">Inventor</div>
         <div class="skill">Project Management</div>
         <div class="skill">Manufacturing Processes</div>
       </div>
     </div>
+
+    <!-- Proficient -->
     <div class="skills-category">
       <h3>Proficient</h3>
       <div class="skills-grid">
         <div class="skill">Prototyping</div>
-        <div class="skill">Design for Manufaturabilty (DFM)</div>
+        <div class="skill">Design for Manufacturability (DFM)</div>
         <div class="skill">Welding</div>
         <div class="skill">Injection Molding</div>
         <div class="skill">Jigs & Fixtures</div>
@@ -235,91 +392,51 @@
         <div class="skill">CNC Programming</div>
       </div>
     </div>
+
+    <!-- Developing -->
     <div class="skills-category">
       <h3>Developing</h3>
       <div class="skills-grid">
         <div class="skill">Robotics</div>
         <div class="skill">Casting</div>
-        <div class="skill">PLC Programming</div>        
+        <div class="skill">PLC Programming</div>
         <div class="skill">3D Printing</div>
         <div class="skill">Finite Element Analysis</div>
       </div>
     </div>
   </section>
 
- <!-- Work Experience -->
-<section id="work-experience" class="section work-experience">
-  <h1>Work Experience</h1>
-  <div class="work-experience-list">
+  <!-- =========================
+       WORK EXPERIENCE SECTION
+  ========================= -->
+  <section id="work-experience" class="section work-experience">
+    <h1>Work Experience</h1>
+    <div class="work-experience-list">
+      <!-- Example work item -->
+      <div class="work-experience-item" onclick="toggleDescription(this)">
+        <h3>2024 - Present</h3>
+        <p><strong><i class="fa-solid fa-up-right-from-square"></i> Wieser Form Fabrication | Engineering Project Manager</strong></p>
+        <div class="description">
+          <p>- Coordinated design and implementation of manufacturing tools...</p>
+          <p>- Created and maintained weekly and monthly production schedules...</p>
+        </div>
+      </div>
+      <!-- Add more items here... -->
+    </div>
+  </section>
 
-    <div class="work-experience-item" onclick="toggleDescription(this)">
-      <h3>2024 - Present</h3>
-      <p><strong><i class="fa-solid fa-up-right-from-square"></i>  Wieser Form Fabrication | Engineering Project Manager</strong></p>
+  <!-- =========================
+       AWARDS SECTION
+  ========================= -->
+  <section id="awards" class="section awards">
+    <h1>Awards & Achievements</h1>
+    <div class="award-item" onclick="toggleCard(this)">
+      <h3>2024</h3>
+      <p><strong>Outstanding Engineer Award - XYZ Aerospace</strong></p>
       <div class="description">
-        <p> -  Coordinated design and implementation of manufacturing tools, improving workflow efficiency by 25% and supporting
-            on-time project delivery.</p>
-        <p> - Created and maintained weekly and monthly production schedules to balance workload and prioritize orders.
-        <p> - Utilized Autodesk Inventor for 3D modeling and design validation, reducing design errors by 20% and ensuring compliance with
-            industry standards.</p>
-        <p> - Managed design revisions and change requests to align with customer requirements and production capabilities.</p>
-        <p> - Collaborated with shop floor staff and suppliers to resolve technical issues, preventing production delays</p>
+        <p>Received for leading cross-functional design improvements...</p>
       </div>
     </div>
-
-    <div class="work-experience-item" onclick="toggleDescription(this)">
-      <h3>2023 - 2024</h3>
-      <p><strong><i class="fa-solid fa-up-right-from-square"></i>  Viracon | Senior Engineering Design Experience (Capstone)</strong></p>
-      <div class="description">
-        <p> - Led the design, analysis, and development of a scaled Tilt Table prototype to improve ergonomics for employees, optimizing
-             workflow and enhancing productivity.</p>
-        <p> - Conducted FEA and CAD modeling using SolidWorks, ensuring structural integrity and compliance with industry standards.</p>
-        <p> - Implemented manufacturing processes including design, machining, assembly, and testing, delivering a successful functional
-            prototype integrated into Viracon’s production facility.</p>
-      </div>
-    </div>
-
-    <div class="work-experience-item" onclick="toggleDescription(this)">
-      <h3>2022 - 2024</h3>
-      <p><strong><i class="fa-solid fa-up-right-from-square"></i>  Walmart | Stocking Associate (CAP 1)</strong></p>
-      <div class="description">
-        <p> - Recognized as a reliable team player who was consistently sought out by coworkers and supervisors for assistance with daily tasks and problem-solving.</p>
-        <p> - Demonstrated a strong work ethic by completing assignments efficiently, maintaining store standards, and going above expectations to support the team.</p>
-        <p> - Took initiative to help others and ensured shelves were fully stocked and organized, contributing to smooth store operations and customer satisfaction.</p>
-      </div>
-    </div>
-
-    <div class="work-experience-item" onclick="toggleDescription(this)">
-      <h3>2022-2022 (Internship)</h3>
-      <p><strong><i class="fa-solid fa-up-right-from-square"></i>  Midwest Manufacturing | Engineering Manager Intern</strong></p>
-      <div class="description">
-        <p> - Supervised a team of five to improve workplace efficiency, reducing system runtime.</p>
-        <p> - Developed strong communication, critical thinking, and management skills, enhancing team productivity and project outcomes.</p>
-        <p> - Ensured safety compliance by traveling to new plants and implementing safety measures, increasing safety compliance.</p>
-      </div>
-    </div>
-
-    <div class="work-experience-item" onclick="toggleDescription(this)">
-      <h3>2019 - 2025</h3>
-      <p><strong><i class="fa-solid fa-up-right-from-square"></i>  University of Wisconsin - Stout | B.S. Manufacturing Engineering</strong></p>
-      <div class="description">
-        <p>Developed expertise in manufacturing systems, design for manufacturability, lean practices, and engineering leadership through coursework and projects.</p>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- Awards & Achievements -->
-<section id="awards" class="section awards">
-  <h1>Awards & Achievements</h1>
-<div class="award-item" onclick="toggleCard(this)">
-  <h3>2024</h3>
-  <p><strong>Outstanding Engineer Award - XYZ Aerospace</strong></p>
-  <div class="description">
-    <p>Received for leading cross-functional design improvements that reduced manufacturing costs by 15%.</p>
-  </div>
-</div>
-  
     <div class="award-item">
       <h3>2023</h3>
       <p>1st Place - National Student Design Competition</p>
@@ -328,53 +445,49 @@
       <h3>2022</h3>
       <p>Dean’s List - University of Wisconsin - Stout</p>
     </div>
-  </div>
-</section>
+  </section>
 
-
-    <!-- Projects -->
-<section id="projects" class="section projects">
-  <h2>Projects</h2>
-  <div class="project-list">
-
-<div class="project-card" onclick="toggleCard(this)">
-  <img src="assets/Tilt_Table_Cover_Photo.png" alt="Project 1">
-  <h3>Tilt Table - Prototype</h3>
-  <p class="short-desc">Ergonomic tilt table design for glass handling.</p>
-  <div class="description">
-    <p>Designed and built a scaled prototype for Viracon’s facility using SolidWorks & FEA validation.</p>
-    <a href="assets/Tilt_Table_Prototype.pdf" target="_blank">View Details</a>
-    <a href="https://youtu.be/Y_yHQ1yjqLk" target="_blank">View Video</a>
-  </div>
-</div>
-
-    <div class="project-card" onclick="toggleProject(this)">
-      <img src="assets/Cover_Photo.jpg" alt="Project 2">
-      <h3>Project 2</h3>
-      <p class="short-desc">Brief summary here.</p>
-      <div class="description">
-        <p>
-          More detailed explanation of project 2, including methods and impact.
-        </p>
-        <a href="https://example.com/project2" target="_blank">View Details</a>
+  <!-- =========================
+       PROJECTS SECTION
+  ========================= -->
+  <section id="projects" class="section projects">
+    <h2>Projects</h2>
+    <div class="project-list">
+      <div class="project-card" onclick="toggleCard(this)">
+        <img src="assets/Tilt_Table_Cover_Photo.png" alt="Project 1">
+        <h3>Tilt Table - Prototype</h3>
+        <p class="short-desc">Ergonomic tilt table design for glass handling.</p>
+        <div class="description">
+          <p>Designed and built a scaled prototype for Viracon’s facility...</p>
+          <a href="assets/Tilt_Table_Prototype.pdf" target="_blank">View Details</a>
+          <a href="https://youtu.be/Y_yHQ1yjqLk" target="_blank">View Video</a>
+        </div>
+      </div>
+      <div class="project-card" onclick="toggleCard(this)">
+        <img src="assets/Cover_Photo.jpg" alt="Project 2">
+        <h3>Project 2</h3>
+        <p class="short-desc">Brief summary here.</p>
+        <div class="description">
+          <p>More detailed explanation of project 2, including methods and impact.</p>
+          <a href="https://example.com/project2" target="_blank">View Details</a>
+        </div>
       </div>
     </div>
+  </section>
 
-  </div>
-</section>
-
-
-
-  <!-- Contact -->
+  <!-- =========================
+       CONTACT SECTION
+  ========================= -->
   <section id="contact" class="section contact">
     <h2>Contact Me</h2>
     <form id="contact-form" action="https://formspree.io/f/xqadnpao" method="post">
-  <input type="text" name="name" placeholder="Your Name" required>
-  <input type="email" name="email" placeholder="Your Email" required>
-  <textarea name="message" placeholder="Your Message" required></textarea>
-  <button type="submit">Send</button>
-</form>
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
 
+    <!-- Social icons -->
     <div class="social">
       <a href="https://www.linkedin.com/in/nate-karau61/" target="_blank"><i class="fab fa-linkedin"></i></a>
       <a href="https://github.com/NateKarau61" target="_blank"><i class="fab fa-github"></i></a>
@@ -384,48 +497,67 @@
       <a href="https://www.facebook.com/Nathaniel.Karau61/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
       <a href="https://www.tiktok.com/@natekarau" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
     </div>
-    <div id="form-confirmation" style="display:none; color:var(--accent); margin-top:10px;">
-  Thank you! Your message has been sent.
-</div>
 
+    <!-- Confirmation message -->
+    <div id="form-confirmation" style="display:none; color:var(--accent); margin-top:10px;">
+      Thank you! Your message has been sent.
+    </div>
   </section>
 
+  <!-- =========================
+       FOOTER
+  ========================= -->
   <footer>
     <p>© 2025 Nathaniel Karau</p>
   </footer>
 </div>
 
+<!-- =========================
+     JAVASCRIPT
+========================= -->
 <script>
-  // Fade-in on scroll
+  // Fade-in animation on scroll
   const sections = document.querySelectorAll('.section');
   const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => { if(entry.isIntersecting) entry.target.classList.add('visible'); });}, { threshold: 0.1 });
+    entries.forEach(entry => {
+      if(entry.isIntersecting) entry.target.classList.add('visible');
+    });
+  }, { threshold: 0.1 });
   sections.forEach(section => observer.observe(section));
-  // Toggle Work Experience Descriptions
-function toggleDescription(item) {item.classList.toggle("active");}
+
+  // Toggle work experience description (expand/collapse)
+  function toggleDescription(item) {
+    item.classList.toggle("active");
+  }
+
+  // Contact form submission with Formspree
   const form = document.getElementById('contact-form');
-form.addEventListener('submit', async (e) => {
-  e.preventDefault();
-  const data = new FormData(form);
-  const response = await fetch(form.action, {    method: form.method,    body: data,    headers: { 'Accept': 'application/json' }  });
-  if (response.ok) {
-    document.getElementById('form-confirmation').style.display = 'block';
-    form.reset();  } else {
-    alert('Oops! There was a problem sending your message.');  }});
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const data = new FormData(form);
+    const response = await fetch(form.action, {
+      method: form.method,
+      body: data,
+      headers: { 'Accept': 'application/json' }
+    });
+    if (response.ok) {
+      document.getElementById('form-confirmation').style.display = 'block';
+      form.reset();
+    } else {
+      alert('Oops! There was a problem sending your message.');
+    }
+  });
 
-function toggleCard(card) {
-  // If you want multiple open at once, just toggle:
-  card.classList.toggle("active");
-
-  // 👉 If you want only one open at a time (accordion style), replace above with:
-  /*
-  const siblings = card.parentNode.querySelectorAll('.work-experience-item, .award-item, .project-card');
-  siblings.forEach(sib => { if (sib !== card) sib.classList.remove("active"); });
-  card.classList.toggle("active");
-  */
-}
-  
-
+  // Toggle card (for projects and awards)
+  function toggleCard(card) {
+    card.classList.toggle("active");
+    // If you want only one open at a time (accordion style), replace above with this:
+    /*
+    const siblings = card.parentNode.querySelectorAll('.work-experience-item, .award-item, .project-card');
+    siblings.forEach(sib => { if (sib !== card) sib.classList.remove("active"); });
+    card.classList.toggle("active");
+    */
+  }
 </script>
 </body>
 </html>
