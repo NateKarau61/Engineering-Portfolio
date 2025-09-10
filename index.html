@@ -550,12 +550,12 @@
 
   // Toggle card (for projects and awards)
   function toggleCard(card) {
-    card.classList.toggle("active");
-    // If you want only one open at a time (accordion style), replace above with this:
-    /*
-    const siblings = card.parentNode.querySelectorAll('.work-experience-item, .award-item, .project-card');
+        const siblings = card.parentNode.querySelectorAll('.work-experience-item, .award-item, .project-card');
     siblings.forEach(sib => { if (sib !== card) sib.classList.remove("active"); });
     card.classList.toggle("active");
+    // If you want all open at a time (accordion style), replace above with this:
+    /*
+    .card.classList.toggle("active");
     */
   }
 </script>
