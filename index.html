@@ -79,8 +79,19 @@
     /* Skills */
     .skills-category { margin-top: 2rem; width: 100%; max-width: 900px; text-align: center; }
     .skills-category h3 { color: var(--accent); margin-bottom: 1rem; }
-    .skills-grid { display: grid; flex-wrap: wrap; repeat(auto-fit, minmax(0, max-content)); gap: 1rem; justify-content: center; }
-    .skill { background: #333; padding: 0.5rem 1rem; border-radius: 6px; }
+    .skills-grid {
+  display: flex;                /* Use flexbox instead of grid */
+  flex-wrap: wrap;              /* Allow wrapping to next line */
+  gap: 1rem;                    /* Space between skill boxes */
+  justify-content: center;      /* Keep rows centered */}
+    .skill {
+  background: #333;
+  padding: 0.4rem 0.8rem;       /* Tight padding around text */
+  border-radius: 6px;
+  display: inline-block;        /* Box hugs text width */
+  white-space: nowrap;          /* Prevent words from splitting */
+  text-align: center;}
+
 
 /* Work Experience & Awards */
 .work-experience-list,
