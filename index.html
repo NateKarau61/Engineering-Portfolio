@@ -14,60 +14,25 @@
        GLOBAL STYLES & RESET
     ------------------------- */
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    html, body {
-      width: 100%;
-      font-family: 'Arial', sans-serif;
-      background: #1a1a1a;
-      color: #e0e0e0;
-      scroll-behavior: smooth;
-    }
-
+    html, body {    width: 100%;  font-family: 'Arial', sans-serif;  background: #1a1a1a; color: #e0e0e0; scroll-behavior: smooth;}
     :root { --accent: #00aaff; } /* accent color variable */
 
     /* -------------------------
        SIDEBAR NAVIGATION
     ------------------------- */
-    .sidebar {
-      position: fixed; top: 0; left: 0;
-      width: 220px; height: 100%;
-      background: #111;
-      padding: 2rem 1rem;
-      display: flex; flex-direction: column; align-items: center;
-    }
+    .sidebar {  position: fixed; top: 0; left: 0;  width: 220px; height: 100%;  background: #111;  padding: 2rem 1rem;  display: flex; flex-direction: column; align-items: center;}
     .sidebar h2 { color: white; margin-bottom: 2rem; }
     .sidebar ul { list-style: none; width: 100%; padding: 0; }
     .sidebar ul li { margin: 1.5rem 0; text-align: center; }
-    .sidebar ul li a {
-      color: #e0e0e0;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 1.2rem;
-      transition: color 0.3s;
-    }
+    .sidebar ul li a {  color: #e0e0e0; text-decoration: none; font-weight: bold; font-size: 1.2rem; transition: color 0.3s;}
     .sidebar ul li a:hover { color: var(--accent); }
 
     /* Resume link styling */
-    .sidebar ul li.resume-link a {
-      border: 2px solid var(--accent);
-      padding: 0.4rem 0.6rem;
-      border-radius: 6px;
-      display: inline-block;
-    }
-    .sidebar ul li.resume-link a:hover {
-      background: var(--accent);
-      color: black;
-    }
+    .sidebar ul li.resume-link a {  border: 2px solid var(--accent);  padding: 0.4rem 0.6rem;  border-radius: 6px;  display: inline-block;}
+    .sidebar ul li.resume-link a:hover {  background: var(--accent);  color: black;}
 
     /* Resume button style (used in Home too) */
-    .resume-btn {
-      padding: 0.8rem 1.5rem;
-      border-radius: 8px;
-      background: var(--accent);
-      color: white;
-      text-decoration: none;
-      display: flex; align-items: center; gap: 0.5rem;
-      font-weight: bold;
-    }
+    .resume-btn {  padding: 0.8rem 1.5rem;  border-radius: 8px;  background: var(--accent);  color: white;  text-decoration: none;  display: flex; align-items: center; gap: 0.5rem;  font-weight: bold;}
     .resume-btn:hover { background: #0088cc; color: white; }
 
     /* -------------------------
@@ -76,225 +41,87 @@
     .content { margin-left: 220px; } /* shifts right for sidebar */
 
     /* Section base styling */
-    .section {
-      min-height: 100vh;
-      display: flex; flex-direction: column;
-      justify-content: center; align-items: center;
-      text-align: center;
-      padding: 2rem;
-      border-bottom: 1px solid #333;
-      opacity: 0; transform: translateY(20px);
-      transition: all 1s ease;
-    }
+    .section {   min-height: 100vh;  display: flex; flex-direction: column;  justify-content: center; align-items: center;  text-align: center;  padding: 2rem;  border-bottom: 1px solid #333;  opacity: 0; transform: translateY(20px);  transition: all 1s ease;}
     .section.visible { opacity: 1; transform: translateY(0); }
 
     /* -------------------------
        HOME SECTION
     ------------------------- */
     .home { background: #1e1e1e; }
-    .home img {
-      width: 180px; height: 180px;
-      border-radius: 50%; margin-top: 1rem;
-      border: 3px solid #444; object-fit: cover;
-    }
-    .home .button-group {
-      margin-top: 1.5rem; display: flex; gap: 1rem;
-    }
-    .home .button-group a {
-      padding: 0.8rem 1.5rem;
-      border-radius: 8px;
-      background: #444; color: white;
-      text-decoration: none;
-      font-weight: bold;
-      transition: background 0.3s;
-      display: flex; align-items: center; gap: 0.5rem;
-    }
+    .home img {  width: 180px; height: 180px;  border-radius: 50%; margin-top: 1rem;  border: 3px solid #444; object-fit: cover;}
+    .home .button-group {  margin-top: 1.5rem; display: flex; gap: 1rem;}
+    .home .button-group a { padding: 0.8rem 1.5rem; border-radius: 8px; background: #444; color: white; text-decoration: none; font-weight: bold; transition: background 0.3s; display: flex; align-items: center; gap: 0.5rem;}
     .home .button-group a:hover { background: var(--accent); color: black; }
 
     /* -------------------------
        ABOUT SECTION
     ------------------------- */
-    #about {
-      padding: 80px 20px;
-      max-width: 1000px;
-      margin: 0 auto;
-      color: white;
-      background-color: #1a1a1a;
-    }
-    #about h1 {
-      font-size: 2.5rem;
-      text-align: center;
-      margin-bottom: 40px;
-      color: var(--accent);
-    }
-    .about-category p {
-      font-size: 1.1rem;
-      line-height: 1.8;
-      margin-bottom: 20px;
-      text-align: justify;
-      max-width: 800px;
-      margin-left: auto; margin-right: auto;
-    }
+    #about {  padding: 80px 20px;  max-width: 1000px;  margin: 0 auto;  color: white;  background-color: #1a1a1a;}
+    #about h1 {  font-size: 2.5rem;  text-align: center;  margin-bottom: 40px;  color: var(--accent); }
+    .about-category p {  font-size: 1.1rem;  line-height: 1.8;  margin-bottom: 20px;  text-align: justify;  max-width: 800px;  margin-left: auto; margin-right: auto;}
 
     @media screen and (max-width: 768px) {
       #about { padding: 50px 15px; }
       #about h1 { font-size: 2rem; }
-      .about-category p { font-size: 1rem; }
-    }
+      .about-category p { font-size: 1rem; }}
 
     /* -------------------------
        SKILLS SECTION
     ------------------------- */
-    .skills-category {
-      margin-top: 2rem;
-      width: 100%; max-width: 900px;
-      text-align: center;
-    }
+    .skills-category {  margin-top: 2rem;  width: 100%; max-width: 900px;  text-align: center;}
     .skills-category h3 { color: var(--accent); margin-bottom: 1rem; }
 
     /* Skill grid - keeps rows aligned but boxes wrap text */
-    .skills-grid {
-      display: flex; flex-wrap: wrap;
-      gap: 1rem; justify-content: center;
-    }
-    .skill {
-      background: #333;
-      padding: 0.4rem 0.8rem;
-      border-radius: 6px;
-      display: inline-block;
-      white-space: nowrap;
-      text-align: center;
-    }
+    .skills-grid {  display: flex; flex-wrap: wrap;  gap: 1rem; justify-content: center;}
+    .skill {  background: #333;  padding: 0.4rem 0.8rem;  border-radius: 6px;  display: inline-block;  white-space: nowrap;  text-align: center;}
 
     /* -------------------------
        WORK EXPERIENCE & AWARDS
     ------------------------- */
     .work-experience-list,
-    .awards-list {
-      display: flex; flex-direction: column;
-      gap: 1.5rem;
-      width: 100%; max-width: 800px;
-      margin: 2rem auto 0 auto;
-      align-items: center; justify-content: center;
-    }
-    .work-experience-item, .award-item {
-      background: #2b2b2b;
-      border: 1px solid #444;
-      border-radius: 10px;
-      padding: 1rem 1.5rem;
-      text-align: left;
-      box-shadow: 0 6px 12px rgba(0,0,0,0.3);
-      transition: transform 0.3s, background 0.3s;
-      cursor: pointer;
-    }
-    .work-experience-item:hover, .award-item:hover {
-      transform: translateY(-5px); background: #333;
-    }
-    .work-experience-item h3, .award-item h3 {
-      margin-bottom: 0.3rem;
-      color: var(--accent); text-align: center;
-    }
-    .work-experience-item p strong, .award-item p {
-      color: #fff; text-align: center;
-    }
+    .awards-list { display: flex; flex-direction: column; gap: 1.5rem; width: 100%; max-width: 800px; margin: 2rem auto 0 auto; align-items: center; justify-content: center;}
+    .work-experience-item, .award-item {  background: #2b2b2b;  border: 1px solid #444;  border-radius: 10px;  padding: 1rem 1.5rem;  text-align: left;  box-shadow: 0 6px 12px rgba(0,0,0,0.3);  transition: transform 0.3s, background 0.3s;  cursor: pointer;}
+    .work-experience-item:hover, .award-item:hover {  transform: translateY(-5px); background: #333;}
+    .work-experience-item h3, .award-item h3 {  margin-bottom: 0.3rem;  color: var(--accent); text-align: center;}
+    .work-experience-item p strong, .award-item p {  color: #fff; text-align: center;}
 
     /* Hidden expandable descriptions */
     .work-experience-item .description,
     .award-item .description,
-    .project-card .description {
-      display: none;
-      margin-top: 0.8rem;
-      color: #ccc;
-      font-size: 0.95rem;
-      line-height: 1.4;
-    }
+    .project-card .description {  display: none;  margin-top: 0.8rem;  color: #ccc;  font-size: 0.95rem;  line-height: 1.4;}
     /* Show description when parent is active */
     .work-experience-item.active .description,
     .award-item.active .description,
-    .project-card.active .description {
-      display: block;
-    }
+    .project-card.active .description {  display: block;}
 
     /* -------------------------
        PROJECTS SECTION
     ------------------------- */
     .projects h1 { margin-bottom: 1rem; }
-    .project-list {
-      display: flex; gap: 2rem;
-      margin-top: 2rem;
-      flex-wrap: wrap; justify-content: center;
-    }
-    .project-card {
-      background: #333; color: #e0e0e0;
-      padding: 1rem;
-      border-radius: 10px;
-      width: 250px;
-      box-shadow: 0 8px 15px rgba(0,0,0,0.3);
-      transition: transform 0.3s;
-      cursor: pointer;
-    }
+    .project-list {  display: flex; gap: 2rem;  margin-top: 2rem;  flex-wrap: wrap; justify-content: center;}
+    .project-card {  background: #333; color: #e0e0e0;  padding: 1rem;  border-radius: 10px;  width: 250px;  box-shadow: 0 8px 15px rgba(0,0,0,0.3);  transition: transform 0.3s;  cursor: pointer;}
     .project-card:hover { transform: translateY(-10px); }
-    .project-card img {
-      width: 100%; height: 150px;
-      border-radius: 8px; margin-bottom: 1rem;
-      object-fit: cover;
-    }
-    .project-card a {
-      text-decoration: none;
-      color: var(--accent);
-      font-weight: bold;
-    }
-    .project-card .description a {
-      display: inline-block;
-      margin-right: 10px;
-      color: var(--accent);
-      text-decoration: none;
-    }
+    .project-card img {  width: 100%; height: 150px;   border-radius: 8px; margin-bottom: 1rem;  object-fit: cover;}
+    .project-card a { text-decoration: none;  color: var(--accent);  font-weight: bold;}
+    .project-card .description a {  display: inline-block;  margin-right: 10px;  color: var(--accent);  text-decoration: none;}
 
     /* -------------------------
        CONTACT SECTION
     ------------------------- */
-    .contact form {
-      display: flex; flex-direction: column;
-      gap: 1rem; width: 300px;
-    }
-    .contact input, .contact textarea {
-      padding: 0.8rem;
-      border: none; border-radius: 5px;
-      background: #333; color: #e0e0e0;
-    }
-    .contact button {
-      padding: 0.8rem;
-      border: none; border-radius: 5px;
-      background: #555; color: white;
-      cursor: pointer; transition: background 0.3s;
-    }
+    .contact form {  display: flex; flex-direction: column;  gap: 1rem; width: 300px;}
+    .contact input, .contact textarea {  padding: 0.8rem  border: none; border-radius: 5px;  background: #333; color: #e0e0e0;}
+    .contact button { padding: 0.8rem;  border: none; border-radius: 5px;  background: #555; color: white;  cursor: pointer; transition: background 0.3s;}
     .contact button:hover { background: #777; }
 
     /* Social icons row */
-    .social {
-      display: flex; gap: 1rem;
-      margin-top: 1rem;
-      justify-content: center;
-    }
-    .social a {
-      color: #e0e0e0;
-      font-size: 1.5rem;
-      transition: color 0.3s;
-      display: flex; align-items: center; gap: 0.3rem;
-      text-decoration: none;
-    }
+    .social {  display: flex; gap: 1rem;  margin-top: 1rem;  justify-content: center;}
+    .social a {  color: #e0e0e0;  font-size: 1.5rem;  transition: color 0.3s;  display: flex; align-items: center; gap: 0.3rem;  text-decoration: none;}
     .social a:hover { color: var(--accent); }
 
     /* -------------------------
        FOOTER
     ------------------------- */
-    footer {
-      text-align: center;
-      padding: 1rem;
-      background: #111;
-      color: #aaa;
-    }
+    footer {   text-align: center;  padding: 1rem;  background: #111;  color: #aaa;}
   </style>
 </head>
 <body>
